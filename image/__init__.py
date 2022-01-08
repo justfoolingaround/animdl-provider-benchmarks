@@ -1,7 +1,7 @@
 from PIL import Image, ImageDraw, ImageFont
 
 base_image = Image.new(
-    "RGBA", (330, 50)
+    "RGBA", (420, 50)
 )
 
 def generate_image(asset_image, color, status, *, font="./assets/font.ttf"):
@@ -20,7 +20,7 @@ def generate_image(asset_image, color, status, *, font="./assets/font.ttf"):
     drawable = ImageDraw.Draw(base_copy)
 
     drawable.text(
-        (75, 5), status, color, drawable_font, align="center"
+        (80, 5), status, color, drawable_font, align="center"
     )
 
     return base_copy
