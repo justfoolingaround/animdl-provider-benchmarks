@@ -14,12 +14,12 @@ jobs:
 
       - name: Install dependencies
         run: |
-        pip install --upgrade pip
-        pip install PIL git+https://github.com/justfoolingaround/animdl.git
+            pip install --upgrade pip
+            pip install PIL git+https://github.com/justfoolingaround/animdl.git
 
       - name: Run generator.py
         run: |
-        python "generator.py"
+            python "generator.py"
 
       - name: Auto Commit
         uses: stefanzweifel/git-auto-commit-action@v4
