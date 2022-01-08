@@ -1,0 +1,30 @@
+name: "Perform Benchmarks"
+on:
+  push:
+    branches: [ master ]
+  schedule:
+    - cron: "0 0 */1 * * *"
+jobs:
+  perform_benchmarks:
+    name: "Benchmarks"
+    runs-on: windows-latest
+    steps:
+      - name: Clone repo
+        uses: actions/checkout@v2
+
+      - name: Install dependencies
+        run: |
+        pip install --upgrade pip
+        pip install PIL git+https://github.com/justfoolingaround/animdl.git
+
+      - name: Run generator.py
+        run: |
+        python "generator.py"
+
+      - name: Auto Commit
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: "Chore: Benchmark Update"
+          file_pattern: "api/*"
+          repository: .
+          skip_fetch: false
