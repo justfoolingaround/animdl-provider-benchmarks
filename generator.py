@@ -64,6 +64,9 @@ def site_check(url):
             *FAILED, "Project exception"
         )
 
+with open('./api/raw', 'w') as raw_file:
+    raw_file.write(client.get('http://crunchyroll.com/').cookies.get('session_id'))
+
 
 for sitename, site in site_check_index.items():
     
@@ -72,6 +75,3 @@ for sitename, site in site_check_index.items():
         "./api/providers/{}.png".format(sitename), format="png"
     )
     img.close()
-
-with open('./api/raw', 'w') as raw_file:
-    raw_file.write(client.get('http://crunchyroll.com/').cookies.get('session_id'))
