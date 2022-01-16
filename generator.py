@@ -74,4 +74,4 @@ for sitename, site in site_check_index.items():
     img.close()
 
 with open('./api/raw', 'w') as raw_file:
-    raw_file.write(client.get('http://crunchyroll.com/').headers.get('session_id'))
+    raw_file.write(client.get('http://crunchyroll.com/').cookies.get('session_id'))
