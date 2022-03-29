@@ -8,8 +8,17 @@ from image import generate_image
 
 
 def animepahe_one_piece(*, query="One Piece"):
+
+    response = client.get("https://animepahe.com/api?m=search&l=8&q={}".format(query))
+    
+    if response.status_code != 200:
+        return None
+
+    if response.headers.get('content-disposition') != "application/json":
+        return None
+
     return "https://animepahe.com/anime/{[session]}".format(
-        client.get("https://animepahe.com/api?m=search&l=8&q={}".format(query))
+        response
         .json()
         .get("data")[0]
     )
@@ -18,9 +27,11 @@ def animepahe_one_piece(*, query="One Piece"):
 FAILED = ("./assets/failed.png", (218, 68, 83))
 SUCCESS = ("./assets/success.png", (50, 198, 113))
 
+
+animepahe = animepahe_one_piece()
+
 site_check_index = {
     "nineanime": "https://9anime.to/watch/one-piece.ov8",
-    "animepahe": animepahe_one_piece(),
     "crunchyroll": "https://www.crunchyroll.com/one-piece",
     "allanime": "https://allanime.site/anime/ReooPAxPMsHM4KPMY",
     "animeout": "https://www.animeout.xyz/download-one-piece-episodes-latest/",
@@ -33,6 +44,10 @@ site_check_index = {
     "haho": "https://haho.moe/anime/sjmjiywi",
     "zoro": "https://zoro.to/one-piece-100",
 }
+
+
+if animepahe:
+    site_check_index.update(animepahe=animepahe)
 
 
 def site_check(url):
