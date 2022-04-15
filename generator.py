@@ -32,7 +32,7 @@ def scrape_keys():
 
     page = client.get("https://goload.pro/streaming.php?id=MTgxNzk2").text
 
-    on_page = regex.findall(r"(container|videocontent)-(\d+)", page)
+    on_page = regex.findall(r"(?:container|videocontent)-(\d+)", page)
 
     if not on_page:
         return
