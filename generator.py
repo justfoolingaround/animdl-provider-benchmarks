@@ -10,19 +10,65 @@ from image import generate_image
 def animepahe_one_piece(*, query="One Piece"):
 
     response = client.get("https://animepahe.com/api?m=search&l=8&q={}".format(query))
-    
+
     if response.status_code != 200:
         return None
 
-    if response.headers.get('content-disposition') != "application/json":
+    if response.headers.get("content-disposition") != "application/json":
         return None
 
     return "https://animepahe.com/anime/{[session]}".format(
-        response
-        .json()
-        .get("data")[0]
+        response.json().get("data")[0]
     )
 
+
+GOGOANIME_KEYS = "./api/gogoanime.json"
+
+
+def scrape_keys():
+    import regex
+    import json
+    import os
+
+    page = client.get("https://goload.pro/streaming.php?id=MTgxNzk2").text
+
+    on_page = regex.findall(r"container-(\d+)", page)
+
+    if not on_page:
+        return
+
+    key, iv = on_page
+
+    out = {"key": key, "iv": iv}
+
+    with open(GOGOANIME_KEYS, "r") as current_keys:
+        keys = json.load(current_keys)
+
+    if out == keys:
+        return
+
+    with open(GOGOANIME_KEYS, "w") as current_keys:
+        json.dump(out, current_keys)
+
+    waifu = os.getenv("JUSTANOTHERWAIFU")
+
+    if waifu is None:
+        return
+
+    client.post(
+        waifu,
+        json={
+            "embeds": [
+                {
+                    "title": "GogoAnime's keys have updated",
+                    "description": "KEY: `{0[key]}`\nIV: `{0[iv]}`".format(out),
+                    "color": 0x7ad7f0,
+                }
+            ]
+        },
+    )
+
+scrape_keys()
 
 FAILED = ("./assets/failed.png", (218, 68, 83))
 SUCCESS = ("./assets/success.png", (50, 198, 113))
