@@ -8,8 +8,6 @@ jobs:
   perform_benchmarks:
     name: "Benchmarks"
     runs-on: windows-latest
-    env:
-      JUSTANOTHERWAIFU: {{ secrets.JUSTANOTHERWAIFU }}
     steps:
       - name: Clone repo
         uses: actions/checkout@v2
@@ -22,7 +20,8 @@ jobs:
       - name: Run generator.py
         run: |
             python "generator.py"
-
+        env:
+          JUSTANOTHERWAIFU: {{ secrets.JUSTANOTHERWAIFU }}
       - name: Auto Commit
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
