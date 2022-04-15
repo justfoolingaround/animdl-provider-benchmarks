@@ -32,14 +32,14 @@ def scrape_keys():
 
     page = client.get("https://goload.pro/streaming.php?id=MTgxNzk2").text
 
-    on_page = regex.findall(r"container-(\d+)", page)
+    on_page = regex.findall(r"(container|videocontent)-(\d+)", page)
 
     if not on_page:
         return
 
-    key, iv = on_page
+    key, iv, second_key = on_page
 
-    out = {"key": key, "iv": iv}
+    out = {"key": key, "second_key": second_key, "iv": iv}
 
     with open(GOGOANIME_KEYS, "r") as current_keys:
         keys = json.load(current_keys)
@@ -61,7 +61,7 @@ def scrape_keys():
             "embeds": [
                 {
                     "title": "GogoAnime's keys have updated",
-                    "description": "KEY: `{0[key]}`\nIV: `{0[iv]}`".format(out),
+                    "description": "KEY (encrypted-ajax): `{0[key]}`\nKEY (streams): {0[second_key]}\nIV: `{0[iv]}`".format(out),
                     "color": 0x7ad7f0,
                 }
             ]
