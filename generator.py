@@ -61,7 +61,7 @@ def scrape_keys():
             "embeds": [
                 {
                     "title": "GogoAnime's keys have updated",
-                    "description": "KEY (encrypted-ajax): `{0[key]}`\nKEY (streams): {0[second_key]}\nIV: `{0[iv]}`".format(out),
+                    "description": "KEY (encrypted-ajax): `{0[key]}`\nKEY (streams): `{0[second_key]}`\nIV: `{0[iv]}`".format(out),
                     "color": 0x7ad7f0,
                 }
             ]
