@@ -108,5 +108,6 @@ with open("api/selgen.json", "w") as json_file:
         {
             "cipher_key": cipher_key,
         },
+        json_file,
         indent=4,
     )
