@@ -1,5 +1,6 @@
 import io
 import json
+import os
 import pathlib
 import re
 import zipfile
@@ -14,6 +15,52 @@ CHROME_DRIVER_STORAGE_URL = "https://chromedriver.storage.googleapis.com/"
 
 
 client = httpx.Client()
+
+def waifu_alert(cipher_key, cipher_key_function, *, exptn: JavascriptException=None):
+    waifu = os.getenv("JUSTANOTHERWAIFU")
+
+    if waifu is None:
+        return
+
+
+    if cipher_key is None:
+
+        text = "\u002b"
+
+        if cipher_key_function is not None:
+            text += f"\n\nGeneration JS function: `{cipher_key_function}`"
+
+        if exptn is not None:
+            text += f"\n\nExact JS exception that we seem to have obtained: \n`{exptn!r}`"
+
+
+        return client.post(
+            waifu,
+            json={
+                "content": "<@!742641737213673483>",
+                "embeds": [
+                    {
+                        "title": "Cipher key generation failed.",
+                        "description": text,
+                        "color": 0x765bff,
+                    }
+                ]
+            },
+        )
+
+    return client.post(
+        waifu,
+        json={
+            "embeds": [
+                {
+                    "title": "Cipher key generation successful",
+                    "description": f"Cipher key: `{cipher_key}`",
+                    "color": 0x765bff,
+                }
+            ]
+        },
+    )
+
 
 
 def get_chromedriver_file_regex(*, file="chromedriver_win32.zip"):
@@ -97,11 +144,20 @@ driver = Chrome(options=opts)
 
 driver.get(BASE_URL + "/embed/2EYDX1968J1Q")
 
+exptn = None
+
 
 try:
     cipher_key = driver.execute_script(f"return {cipher_key_function}")
-except JavascriptException:
+except JavascriptException as _:
     cipher_key = None
+    exptn = _
+
+waifu_alert(
+    cipher_key,
+    cipher_key_function,
+    exptn=exptn,
+)
 
 with open("api/selgen.json", "w") as json_file:
     json.dump(
