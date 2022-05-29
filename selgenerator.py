@@ -1,8 +1,8 @@
 import io
 import json
-import os
 import pathlib
 import re
+import time
 import zipfile
 
 import httpx
@@ -15,51 +15,8 @@ CHROME_DRIVER_STORAGE_URL = "https://chromedriver.storage.googleapis.com/"
 
 
 client = httpx.Client()
-
-def waifu_alert(cipher_key, cipher_key_function, *, exptn: JavascriptException=None):
-    waifu = os.getenv("JUSTANOTHERWAIFU")
-
-    if waifu is None:
-        return
-
-
-    if cipher_key is None:
-
-        text = "\u002b"
-
-        if cipher_key_function is not None:
-            text += f"\n\nGeneration JS function: `{cipher_key_function}`"
-
-        if exptn is not None:
-            text += f"\n\nExact JS exception that we seem to have obtained: \n`{exptn!r}`"
-
-
-        return client.post(
-            waifu,
-            json={
-                "content": "<@!742641737213673483>",
-                "embeds": [
-                    {
-                        "title": "Cipher key generation failed.",
-                        "description": text,
-                        "color": 0x765bff,
-                    }
-                ]
-            },
-        )
-
-    return client.post(
-        waifu,
-        json={
-            "embeds": [
-                {
-                    "title": "Cipher key generation successful",
-                    "description": f"Cipher key: `{cipher_key}`",
-                    "color": 0x765bff,
-                }
-            ]
-        },
-    )
+max_attempts = 5
+time_delay = 5
 
 
 
@@ -144,20 +101,19 @@ driver = Chrome(options=opts)
 
 driver.get(BASE_URL + "/embed/2EYDX1968J1Q")
 
-exptn = None
+attempts = 0
 
+cipher_key = None
 
-try:
-    cipher_key = driver.execute_script(f"return {cipher_key_function}")
-except JavascriptException as _:
-    cipher_key = None
-    exptn = _
+while cipher_key is None or (attempts < max_attempts):
+    try:
+        cipher_key = driver.execute_script(
+            f"{cipher_key_function}({table_function})"
+        )
+    except JavascriptException:
+        attempts += 1
+        time.sleep(time_delay)
 
-waifu_alert(
-    cipher_key,
-    cipher_key_function,
-    exptn=exptn,
-)
 
 with open("api/selgen.json", "w") as json_file:
     json.dump(
