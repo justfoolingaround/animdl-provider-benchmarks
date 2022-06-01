@@ -22,12 +22,6 @@ jobs:
             python "generator.py"
         env:
           JUSTANOTHERWAIFU: ${{ secrets.JUSTANOTHERWAIFU }}
-      - name: Run selgen.py
-        run: |
-            pip install selenium
-            python "selgenerator.py"
-        env:
-          JUSTANOTHERWAIFU: ${{ secrets.JUSTANOTHERWAIFU }}
       - name: Auto Commit
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
