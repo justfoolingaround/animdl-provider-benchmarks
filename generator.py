@@ -1,3 +1,5 @@
+import json
+import pathlib
 import time
 
 from animdl.core.cli.helpers import ensure_extraction
@@ -6,29 +8,33 @@ from animdl.core.codebase.providers import get_appropriate
 
 from image import generate_image
 
+API_PATH = pathlib.Path(".") / "api"
+API_PATH.mkdir(exist_ok=True)
+
+ASSETS_PATH = pathlib.Path(".") / "assets"
+ASSETS_PATH.mkdir(exist_ok=True)
+
 
 def animepahe_one_piece(*, query="One Piece"):
 
     response = client.get("https://animepahe.com/api?m=search&l=8&q={}".format(query))
 
-    if response.status_code != 200:
+    try:
+        data = response.json()
+    except json.JSONDecodeError:
         return None
 
-    if response.headers.get("content-disposition") != "application/json":
-        return None
-
-    return "https://animepahe.com/anime/{[session]}".format(
-        response.json().get("data")[0]
-    )
+    return f"https://animepahe.com/anime/{data['data'][0]['session']}"
 
 
-GOGOANIME_KEYS = "./api/gogoanime.json"
+GOGOANIME_KEYS = API_PATH / "gogoanime.json"
 
 
 def scrape_keys():
-    import regex
     import json
     import os
+
+    import regex
 
     page = client.get("https://goload.pro/streaming.php?id=MTgxNzk2").text
 
@@ -73,8 +79,8 @@ def scrape_keys():
 
 scrape_keys()
 
-FAILED = ("./assets/failed.png", (218, 68, 83))
-SUCCESS = ("./assets/success.png", (50, 198, 113))
+FAILED = (ASSETS_PATH / "failed.png", (218, 68, 83))
+SUCCESS = (ASSETS_PATH / "success.png", (50, 198, 113))
 
 
 animepahe = animepahe_one_piece()
@@ -95,7 +101,7 @@ site_check_index = {
 }
 
 
-if animepahe:
+if animepahe is not None:
     site_check_index.update(animepahe=animepahe)
 
 
@@ -120,21 +126,21 @@ def site_check(url):
 
         return generate_image(
             *SUCCESS,
-            "{} url(s), {:.02f}s".format(obtained_links, time.perf_counter() - initial)
+            "{} url(s), {:.02f}s".format(obtained_links, time.perf_counter() - initial),
         )
 
     except Exception as _:
         return generate_image(*FAILED, "Project exception")
 
 
-with open("./api/raw", "w") as raw_file:
+with open(API_PATH / "raw", "w") as raw_file:
     raw_file.write(
         client.get("http://crunchyroll.com/").cookies.get("session_id", "no cookie")
     )
 
+PROVIDERS_API_PATH = API_PATH / "providers"
+
 
 for sitename, site in site_check_index.items():
-
-    img = site_check(site)
-    img.save("./api/providers/{}.png".format(sitename), format="png")
-    img.close()
+    with site_check(site) as image:
+        image.save(PROVIDERS_API_PATH / f"{sitename}.png", format="png")
