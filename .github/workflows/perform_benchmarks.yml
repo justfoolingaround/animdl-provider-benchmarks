@@ -15,7 +15,7 @@ jobs:
       - name: Install dependencies
         run: |
             pip install --upgrade pip
-            pip install pillow git+https://github.com/justfoolingaround/animdl.git
+            pip install pillow git+https://github.com/justfoolingaround/animdl.git pkginfo
 
       - name: Run generator.py
         run: |
