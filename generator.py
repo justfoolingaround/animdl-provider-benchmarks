@@ -1,12 +1,37 @@
 import json
+import logging
 import pathlib
+import sys
+import threading
 import time
+from collections import namedtuple
+from queue import Queue
 
 from animdl.core.cli.helpers import ensure_extraction
 from animdl.core.cli.http_client import client
 from animdl.core.codebase.providers import get_appropriate
+from animdl.core.config import (
+    ALLANIME,
+    ANIMEOUT,
+    ANIMEPAHE,
+    ANIMTIME,
+    GOGOANIME,
+    HAHO,
+    KAWAIIFU,
+    MARIN,
+    NINEANIME,
+    ZORO,
+)
 
 from image import generate_image
+
+status = namedtuple(
+    "status",
+    (
+        "status",
+        "message",
+    ),
+)
 
 API_PATH = pathlib.Path(".") / "api"
 API_PATH.mkdir(exist_ok=True)
@@ -14,107 +39,113 @@ API_PATH.mkdir(exist_ok=True)
 ASSETS_PATH = pathlib.Path(".") / "assets"
 ASSETS_PATH.mkdir(exist_ok=True)
 
+LOGGING_FILE = "provider_run.dev_log"
 
-def animepahe_one_piece(*, query="One Piece"):
 
-    response = client.get("https://animepahe.com/api?m=search&l=8&q={}".format(query))
+class DeathThread(threading.Thread):
+
+    kill_state = threading.Event()
+
+    def run(self):
+        sys.settrace(self.global_trace)
+        return super().run()
+
+    def global_trace(self, stack_frame, reason, *args, **kwargs):
+        if reason == "call":
+            return self.local_trace
+
+    def local_trace(self, stack_frame, reason, *args, **kwargs):
+        if self.kill_state.is_set() and reason == "line":
+            raise SystemExit()
+        return self.local_trace
+
+    def kill(self):
+        return self.kill_state.set()
+
+
+logging.basicConfig(
+    filename=LOGGING_FILE,
+    filemode="a",
+    format="%(asctime)s,%(msecs)d %(name)s %(levelname)s %(message)s",
+    datefmt="%H:%M:%S",
+    level=logging.DEBUG,
+)
+
+
+logger = logging.getLogger("logging")
+
+
+def fetch_animepahe_session(session, query="one piece"):
+
+    response = session.get(
+        "https://animepahe.com/api",
+        params={"m": "search", "l": 8, "q": query},
+    )
 
     try:
         data = response.json()
     except json.JSONDecodeError:
         return None
 
-    return f"https://animepahe.com/anime/{data['data'][0]['session']}"
+    return ANIMEPAHE + f"anime/{data['data'][0]['session']}"
 
-
-GOGOANIME_KEYS = API_PATH / "gogoanime.json"
-
-
-def scrape_keys():
-    import json
-    import os
-
-    import regex
-
-    page = client.get("https://goload.pro/streaming.php?id=MTgxNzk2").text
-
-    on_page = regex.findall(r"(?:container|videocontent)-(\d+)", page)
-
-    if not on_page:
-        return
-
-    key, iv, second_key = on_page
-
-    out = {"key": key, "second_key": second_key, "iv": iv}
-
-    with open(GOGOANIME_KEYS, "r") as current_keys:
-        keys = json.load(current_keys)
-
-    if out == keys:
-        return
-
-    with open(GOGOANIME_KEYS, "w") as current_keys:
-        json.dump(out, current_keys)
-
-    waifu = os.getenv("JUSTANOTHERWAIFU")
-
-    if waifu is None:
-        return
-
-    client.post(
-        waifu,
-        json={
-            "embeds": [
-                {
-                    "title": "GogoAnime's keys have updated",
-                    "description": "KEY (encrypted-ajax): `{0[key]}`\nKEY (streams): `{0[second_key]}`\nIV: `{0[iv]}`".format(
-                        out
-                    ),
-                    "color": 0x7AD7F0,
-                }
-            ]
-        },
-    )
-
-
-scrape_keys()
 
 FAILED = (ASSETS_PATH / "failed.png", (218, 68, 83))
 SUCCESS = (ASSETS_PATH / "success.png", (50, 198, 113))
 
 
-animepahe = animepahe_one_piece()
+animepahe_session = fetch_animepahe_session(client)
 
 site_check_index = {
-    "nineanime": "https://9anime.to/watch/one-piece.ov8",
-    "crunchyroll": "https://www.crunchyroll.com/one-piece",
-    "allanime": "https://allanime.site/anime/ReooPAxPMsHM4KPMY",
-    "animeout": "https://www.animeout.xyz/download-one-piece-episodes-latest/",
-    "animixplay": "https://animixplay.to/v1/one-piece",
-    "animtime": "https://animtime.com/title/5",
-    "gogoanime": "https://gogoanime.cm/category/one-piece",
-    "tenshi": "https://tenshi.moe/anime/kjfrhu3s",
-    "twist": "https://twist.moe/a/one-piece",
-    "kawaiifu": "https://kawaiifu.com/tv-series/one-piece-720p-hd.html",
-    "haho": "https://haho.moe/anime/sjmjiywi",
-    "zoro": "https://zoro.to/one-piece-100",
+    "nineanime": NINEANIME + "watch/one-piece.ov8",
+    "allanime": ALLANIME + "anime/ReooPAxPMsHM4KPMY",
+    "animeout": ANIMEOUT + "download-one-piece-episodes-latest/",
+    "animtime": ANIMTIME + "title/5",
+    "gogoanime": GOGOANIME + "category/one-piece",
+    "kawaiifu": KAWAIIFU + "tv-series/one-piece-720p-hd.html",
+    "haho": HAHO + "anime/sjmjiywi",
+    "marin": MARIN + "anime/fntoucz2",
+    "zoro": ZORO + "one-piece-100",
 }
 
 
-if animepahe is not None:
-    site_check_index.update(animepahe=animepahe)
+if animepahe_session is not None:
+    site_check_index.update(animepahe=animepahe_session)
 
 
-def site_check(url):
+max_check_timeout_per = 60
+
+
+def run_for_atmost(timeout):
+    def decorator(func):
+        def wrapper(*args, **kwargs):
+            def run():
+                func(*args, **kwargs)
+
+            t = DeathThread(target=run)
+            t.start()
+            t.join(timeout)
+
+            if t.is_alive():
+                t.kill()
+                raise TimeoutError(
+                    f"{run!r} with ({(args, kwargs)}) took too long to run"
+                )
+
+            return t
+
+        return wrapper
+
+    return decorator
+
+
+@run_for_atmost(max_check_timeout_per)
+def attempt_scraping_for(session, url, *, result: Queue) -> status:
 
     initial = time.perf_counter()
 
     try:
-        links = get_appropriate(client, url, lambda r: r == 1)
-
-        if not links:
-            return generate_image(*FAILED, "No return")
-
+        links = get_appropriate(session, url, lambda r: r == 1)
         obtained_links = 0
 
         for link_cb, _ in links:
@@ -122,25 +153,39 @@ def site_check(url):
                 obtained_links += 1
 
         if not obtained_links:
-            return generate_image(*FAILED, "No links returned")
+            result.put(status(False, "No urls obtained"))
 
-        return generate_image(
-            *SUCCESS,
-            "{} url(s), {:.02f}s".format(obtained_links, time.perf_counter() - initial),
+        result.put(
+            status(
+                True, f"{obtained_links} url(s), {time.perf_counter() - initial:02f}s"
+            )
         )
 
-    except Exception as _:
-        return generate_image(*FAILED, "Project exception")
+    except Exception as exception:
+        logger.error(f"Failed to scrape {url!r} with {exception!r}", exc_info=True)
+        result.put(status(False, f"Internal error"))
 
-
-with open(API_PATH / "raw", "w") as raw_file:
-    raw_file.write(
-        client.get("http://crunchyroll.com/").cookies.get("session_id", "no cookie")
-    )
 
 PROVIDERS_API_PATH = API_PATH / "providers"
+PROVIDERS_API_PATH.mkdir(exist_ok=True)
 
 
 for sitename, site in site_check_index.items():
-    with site_check(site) as image:
-        image.save(PROVIDERS_API_PATH / f"{sitename}.png", format="png")
+
+    result = Queue()
+
+    try:
+        attempt_scraping_for(client, site, result=result)
+        if result.empty():
+            raise RuntimeError("Result queue is empty")
+
+        state = result.get()
+    except (TimeoutError, RuntimeError):
+        state = status(False, "Provider took too long")
+
+    if state.status:
+        image = generate_image(*SUCCESS, state.message)
+    else:
+        image = generate_image(*FAILED, state.message)
+
+    image.save(PROVIDERS_API_PATH / f"{sitename}.png")

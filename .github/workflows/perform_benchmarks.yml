@@ -26,6 +26,6 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: "Chore: Benchmark Update"
-          file_pattern: "api/*"
+          file_pattern: "api/* provider_run.dev_log" 
           repository: .
           skip_fetch: false
