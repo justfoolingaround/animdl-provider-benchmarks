@@ -5174,3 +5174,149 @@ TypeError: cors_proxify() missing 1 required positional argument: 'url'
 21:13:44,129 PIL.PngImagePlugin DEBUG STREAM b'bKGD' 101 6
 21:13:44,129 PIL.PngImagePlugin DEBUG b'bKGD' 101 6 (unknown)
 21:13:44,129 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 119 32768
+22:15:47,849 httpx._client DEBUG HTTP Request: GET https://animepahe.com/api?m=search&l=8&q=one+piece "HTTP/1.1 301 Moved Permanently"
+22:15:48,318 httpx._client DEBUG HTTP Request: GET https://animepahe.ru/api?m=search&l=8&q=one+piece "HTTP/1.1 200 OK"
+22:15:48,896 httpx._client DEBUG HTTP Request: GET https://9anime.pl/watch/one-piece.ov8 "HTTP/1.1 200 OK"
+22:15:49,240 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/episode/list/177 "HTTP/1.1 200 OK"
+22:15:49,240 logging ERROR Failed to scrape 'https://9anime.pl/watch/one-piece.ov8' with JSONDecodeError('Expecting value: line 1 column 1 (char 0)')
+Traceback (most recent call last):
+  File "D:\a\animdl-provider-benchmarks\animdl-provider-benchmarks\generator.py", line 151, in attempt_scraping_for
+    for link_cb, _ in links:
+  File "C:\hostedtoolcache\windows\Python\3.9.13\x64\lib\site-packages\animdl\core\codebase\providers\nineanime\__init__.py", line 64, in fetcher
+    session.get(
+  File "C:\hostedtoolcache\windows\Python\3.9.13\x64\lib\site-packages\httpx\_models.py", line 756, in json
+    return jsonlib.loads(self.text, **kwargs)
+  File "C:\hostedtoolcache\windows\Python\3.9.13\x64\lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "C:\hostedtoolcache\windows\Python\3.9.13\x64\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\hostedtoolcache\windows\Python\3.9.13\x64\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+22:15:51,567 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+22:15:51,567 PIL.PngImagePlugin DEBUG STREAM b'gAMA' 41 4
+22:15:51,567 PIL.PngImagePlugin DEBUG STREAM b'cHRM' 57 32
+22:15:51,567 PIL.PngImagePlugin DEBUG STREAM b'bKGD' 101 6
+22:15:51,567 PIL.PngImagePlugin DEBUG b'bKGD' 101 6 (unknown)
+22:15:51,567 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 119 32768
+22:15:54,120 httpx._client DEBUG HTTP Request: GET https://allanime.to/getVersion "HTTP/1.1 200 OK"
+22:15:54,558 httpx._client DEBUG HTTP Request: GET https://allanime.to/anime/ReooPAxPMsHM4KPMY "HTTP/1.1 200 OK"
+22:15:54,902 httpx._client DEBUG HTTP Request: GET https://api.allanime.co/allanimeapi?variables=%7B%22showId%22%3A+%22ReooPAxPMsHM4KPMY%22%2C+%22translationType%22%3A+%22sub%22%2C+%22episodeString%22%3A+%221%22%7D&extensions=%7B%22persistedQuery%22%3A+%7B%22version%22%3A+1%2C+%22sha256Hash%22%3A+%221f0a5d6c9ce6cd3127ee4efd304349345b0737fbf5ec33a60bbc3d18e3bb7c61%22%7D%7D "HTTP/1.1 200 OK"
+22:15:54,902 logging ERROR Failed to scrape 'https://allanime.to/anime/ReooPAxPMsHM4KPMY' with KeyError('data')
+Traceback (most recent call last):
+  File "D:\a\animdl-provider-benchmarks\animdl-provider-benchmarks\generator.py", line 152, in attempt_scraping_for
+    for _ in ensure_extraction(client, link_cb):
+  File "C:\hostedtoolcache\windows\Python\3.9.13\x64\lib\site-packages\animdl\core\cli\helpers\__init__.py", line 62, in ensure_extraction
+    for stream in stream_uri_caller():
+  File "C:\hostedtoolcache\windows\Python\3.9.13\x64\lib\site-packages\animdl\core\codebase\providers\allanime\__init__.py", line 149, in <lambda>
+    lambda session, content, show_id: list(
+  File "C:\hostedtoolcache\windows\Python\3.9.13\x64\lib\site-packages\animdl\core\codebase\providers\allanime\__init__.py", line 78, in extract_content
+    episode_info = api_response["data"]["episode"]
+KeyError: 'data'
+22:15:54,902 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+22:15:54,902 PIL.PngImagePlugin DEBUG STREAM b'gAMA' 41 4
+22:15:54,902 PIL.PngImagePlugin DEBUG STREAM b'cHRM' 57 32
+22:15:54,902 PIL.PngImagePlugin DEBUG STREAM b'bKGD' 101 6
+22:15:54,902 PIL.PngImagePlugin DEBUG b'bKGD' 101 6 (unknown)
+22:15:54,902 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 119 32768
+22:15:54,949 logging ERROR Failed to scrape 'https://animeout.xyz/download-one-piece-episodes-latest/' with TypeError("cors_proxify() missing 1 required positional argument: 'url'")
+Traceback (most recent call last):
+  File "D:\a\animdl-provider-benchmarks\animdl-provider-benchmarks\generator.py", line 151, in attempt_scraping_for
+    for link_cb, _ in links:
+  File "C:\hostedtoolcache\windows\Python\3.9.13\x64\lib\site-packages\animdl\core\codebase\providers\animeout\__init__.py", line 39, in fetcher
+    animeout_page = session.cf_request("GET", url)
+TypeError: cors_proxify() missing 1 required positional argument: 'url'
+22:15:54,950 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+22:15:54,950 PIL.PngImagePlugin DEBUG STREAM b'gAMA' 41 4
+22:15:54,950 PIL.PngImagePlugin DEBUG STREAM b'cHRM' 57 32
+22:15:54,950 PIL.PngImagePlugin DEBUG STREAM b'bKGD' 101 6
+22:15:54,950 PIL.PngImagePlugin DEBUG b'bKGD' 101 6 (unknown)
+22:15:54,950 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 119 32768
+22:15:55,90 httpx._client DEBUG HTTP Request: GET https://animtime.com/main.0eab142b791320871345.js "HTTP/1.1 200 OK"
+22:15:55,90 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+22:15:55,90 PIL.PngImagePlugin DEBUG STREAM b'gAMA' 41 4
+22:15:55,90 PIL.PngImagePlugin DEBUG STREAM b'cHRM' 57 32
+22:15:55,90 PIL.PngImagePlugin DEBUG STREAM b'bKGD' 101 6
+22:15:55,90 PIL.PngImagePlugin DEBUG b'bKGD' 101 6 (unknown)
+22:15:55,90 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 119 32768
+22:15:55,460 httpx._client DEBUG HTTP Request: GET https://gogoanime.cm/category/one-piece "HTTP/1.1 301 Moved Permanently"
+22:15:55,695 httpx._client DEBUG HTTP Request: GET https://gogoanime.ee/category/one-piece "HTTP/1.1 301 Moved Permanently"
+22:15:55,727 httpx._client DEBUG HTTP Request: GET http://www1.gogoanime.bid/category/one-piece "HTTP/1.1 301 Moved Permanently"
+22:15:55,900 httpx._client DEBUG HTTP Request: GET https://www1.gogoanime.bid/category/one-piece "HTTP/1.1 200 OK"
+22:15:56,181 httpx._client DEBUG HTTP Request: GET https://ajax.gogo-load.com/ajax/load-list-episode?ep_start=0&ep_end=100000&id=171 "HTTP/1.1 200 OK"
+22:15:56,432 httpx._client DEBUG HTTP Request: GET https://gogoanime.cm//one-piece-episode-1 "HTTP/1.1 301 Moved Permanently"
+22:15:56,526 httpx._client DEBUG HTTP Request: GET https://gogoanime.ee//one-piece-episode-1 "HTTP/1.1 301 Moved Permanently"
+22:15:56,541 httpx._client DEBUG HTTP Request: GET http://www1.gogoanime.bid//one-piece-episode-1 "HTTP/1.1 301 Moved Permanently"
+22:15:56,651 httpx._client DEBUG HTTP Request: GET https://www1.gogoanime.bid//one-piece-episode-1 "HTTP/1.1 200 OK"
+22:15:57,156 httpx._client DEBUG HTTP Request: GET https://anihdplay.com/streaming.php?id=MzUxOA==&title=One+Piece+Episode+1 "HTTP/1.1 200 OK"
+22:15:57,505 httpx._client DEBUG HTTP Request: GET https://anihdplay.com/encrypt-ajax.php?title=One+Piece+Episode+1&mip=0.0.0.0&refer=none&ch=d41d8cd98f00b204e9800998ecf8427e&token2=9YU_FMmv2SEnCcV0gQwZ4Q&expires2=1678056356&op=1&id=3GIMFEERE2NXfAfB+mg4VQ==&alias=MzUxOA== "HTTP/1.1 200 OK"
+22:15:57,520 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+22:15:57,520 PIL.PngImagePlugin DEBUG STREAM b'gAMA' 41 4
+22:15:57,520 PIL.PngImagePlugin DEBUG STREAM b'cHRM' 57 32
+22:15:57,520 PIL.PngImagePlugin DEBUG STREAM b'bKGD' 101 6
+22:15:57,520 PIL.PngImagePlugin DEBUG b'bKGD' 101 6 (unknown)
+22:15:57,520 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 119 32768
+22:15:58,490 httpx._client DEBUG HTTP Request: GET https://bestanime3.xyz/tv-series/one-piece-720p-hd.html "HTTP/1.1 200 OK"
+22:15:58,553 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+22:15:58,553 PIL.PngImagePlugin DEBUG STREAM b'gAMA' 41 4
+22:15:58,553 PIL.PngImagePlugin DEBUG STREAM b'cHRM' 57 32
+22:15:58,553 PIL.PngImagePlugin DEBUG STREAM b'bKGD' 101 6
+22:15:58,553 PIL.PngImagePlugin DEBUG b'bKGD' 101 6 (unknown)
+22:15:58,553 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 119 32768
+22:16:00,187 httpx._client DEBUG HTTP Request: GET https://haho.moe/anime/sjmjiywi "HTTP/1.1 200 OK"
+22:16:00,614 httpx._client DEBUG HTTP Request: GET https://haho.moe/anime/sjmjiywi/1 "HTTP/1.1 200 OK"
+22:16:00,957 httpx._client DEBUG HTTP Request: GET https://haho.moe/embed?v=mcmxnvxm "HTTP/1.1 200 OK"
+22:16:00,957 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+22:16:00,957 PIL.PngImagePlugin DEBUG STREAM b'gAMA' 41 4
+22:16:00,957 PIL.PngImagePlugin DEBUG STREAM b'cHRM' 57 32
+22:16:00,957 PIL.PngImagePlugin DEBUG STREAM b'bKGD' 101 6
+22:16:00,957 PIL.PngImagePlugin DEBUG b'bKGD' 101 6 (unknown)
+22:16:00,957 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 119 32768
+22:16:02,447 httpx._client DEBUG HTTP Request: GET https://marin.moe/ "HTTP/1.1 200 OK"
+22:16:04,493 httpx._client DEBUG HTTP Request: GET https://marin.moe/anime/fntoucz2 "HTTP/1.1 200 OK"
+22:16:06,963 httpx._client DEBUG HTTP Request: GET https://marin.moe/anime/fntoucz2/1 "HTTP/1.1 200 OK"
+22:16:06,963 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+22:16:06,963 PIL.PngImagePlugin DEBUG STREAM b'gAMA' 41 4
+22:16:06,963 PIL.PngImagePlugin DEBUG STREAM b'cHRM' 57 32
+22:16:06,963 PIL.PngImagePlugin DEBUG STREAM b'bKGD' 101 6
+22:16:06,963 PIL.PngImagePlugin DEBUG b'bKGD' 101 6 (unknown)
+22:16:06,963 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 119 32768
+22:16:07,375 httpx._client DEBUG HTTP Request: GET https://zoro.to/ajax/v2/episode/list/100 "HTTP/1.1 200 OK"
+22:16:07,606 httpx._client DEBUG HTTP Request: GET https://zoro.to/ajax/v2/episode/servers?episodeId=2142 "HTTP/1.1 200 OK"
+22:16:07,770 httpx._client DEBUG HTTP Request: GET https://zoro.to/ajax/v2/episode/sources?id=574667 "HTTP/1.1 200 OK"
+22:16:07,927 httpx._client DEBUG HTTP Request: GET https://zoro.to/ajax/v2/episode/sources?id=410640 "HTTP/1.1 200 OK"
+22:16:08,95 httpx._client DEBUG HTTP Request: GET https://zoro.to/ajax/v2/episode/sources?id=715550 "HTTP/1.1 200 OK"
+22:16:08,252 httpx._client DEBUG HTTP Request: GET https://zoro.to/ajax/v2/episode/sources?id=739554 "HTTP/1.1 200 OK"
+22:16:08,436 httpx._client DEBUG HTTP Request: GET https://zoro.to/ajax/v2/episode/sources?id=583679 "HTTP/1.1 200 OK"
+22:16:08,646 httpx._client DEBUG HTTP Request: GET https://zoro.to/ajax/v2/episode/sources?id=4145 "HTTP/1.1 200 OK"
+22:16:08,795 httpx._client DEBUG HTTP Request: GET https://zoro.to/ajax/v2/episode/sources?id=715498 "HTTP/1.1 200 OK"
+22:16:08,960 httpx._client DEBUG HTTP Request: GET https://zoro.to/ajax/v2/episode/sources?id=739502 "HTTP/1.1 200 OK"
+22:16:09,301 httpx._client DEBUG HTTP Request: GET https://rapid-cloud.co/ajax/embed-6/getSources?id=fwrrOAYNW7Do "HTTP/1.1 200 OK"
+22:16:09,348 httpx._client DEBUG HTTP Request: GET https://raw.githubusercontent.com/consumet/rapidclown/main/key.txt "HTTP/1.1 200 OK"
+22:16:09,564 httpx._client DEBUG HTTP Request: GET https://rapid-cloud.co/ajax/embed-6/getSources?id=jx8w6o7iUZ54 "HTTP/1.1 200 OK"
+22:16:09,819 httpx._client DEBUG HTTP Request: GET https://rapid-cloud.co/ajax/embed-6/getSources?id=MtadaaZQChGe "HTTP/1.1 200 OK"
+22:16:10,51 httpx._client DEBUG HTTP Request: GET https://rapid-cloud.co/ajax/embed-6/getSources?id=BdsjIlppQfSO "HTTP/1.1 200 OK"
+22:16:10,67 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+22:16:10,67 PIL.PngImagePlugin DEBUG STREAM b'gAMA' 41 4
+22:16:10,67 PIL.PngImagePlugin DEBUG STREAM b'cHRM' 57 32
+22:16:10,67 PIL.PngImagePlugin DEBUG STREAM b'bKGD' 101 6
+22:16:10,67 PIL.PngImagePlugin DEBUG b'bKGD' 101 6 (unknown)
+22:16:10,67 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 119 32768
+22:16:10,317 httpx._client DEBUG HTTP Request: GET https://animepahe.com/anime/18b8e70b-f987-5dea-1220-553cfba0038d "HTTP/1.1 301 Moved Permanently"
+22:16:10,732 httpx._client DEBUG HTTP Request: GET https://animepahe.ru/anime/18b8e70b-f987-5dea-1220-553cfba0038d "HTTP/1.1 200 OK"
+22:16:10,901 httpx._client DEBUG HTTP Request: GET https://animepahe.com/api?m=release&id=18b8e70b-f987-5dea-1220-553cfba0038d&sort=episode_asc&page=1 "HTTP/1.1 301 Moved Permanently"
+22:16:11,251 httpx._client DEBUG HTTP Request: GET https://animepahe.ru/api?m=release&id=18b8e70b-f987-5dea-1220-553cfba0038d&sort=episode_asc&page=1 "HTTP/1.1 200 OK"
+22:16:11,398 httpx._client DEBUG HTTP Request: GET https://animepahe.com/play/18b8e70b-f987-5dea-1220-553cfba0038d/f779929c5a318697c92c316d624990434f2a4bf2a2786d7f40eb04bc6f4a4f43 "HTTP/1.1 301 Moved Permanently"
+22:16:11,603 httpx._client DEBUG HTTP Request: GET https://animepahe.ru/play/18b8e70b-f987-5dea-1220-553cfba0038d/f779929c5a318697c92c316d624990434f2a4bf2a2786d7f40eb04bc6f4a4f43 "HTTP/1.1 200 OK"
+22:16:12,201 httpx._client DEBUG HTTP Request: GET https://pahe.win/EqmUA "HTTP/1.1 200 OK"
+22:16:12,693 httpx._client DEBUG HTTP Request: GET https://kwik.cx/f/DHJBozjF1Usc "HTTP/1.1 200 OK"
+22:16:13,684 httpx._client DEBUG HTTP Request: POST https://kwik.cx/d/DHJBozjF1Usc "HTTP/1.1 302 Found"
+22:16:13,851 httpx._client DEBUG HTTP Request: GET https://pahe.win/fmkoo "HTTP/1.1 200 OK"
+22:16:14,25 httpx._client DEBUG HTTP Request: GET https://kwik.cx/f/pn0dcxtld4hk "HTTP/1.1 200 OK"
+22:16:14,927 httpx._client DEBUG HTTP Request: POST https://kwik.cx/d/pn0dcxtld4hk "HTTP/1.1 302 Found"
+22:16:14,942 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+22:16:14,942 PIL.PngImagePlugin DEBUG STREAM b'gAMA' 41 4
+22:16:14,942 PIL.PngImagePlugin DEBUG STREAM b'cHRM' 57 32
+22:16:14,942 PIL.PngImagePlugin DEBUG STREAM b'bKGD' 101 6
+22:16:14,942 PIL.PngImagePlugin DEBUG b'bKGD' 101 6 (unknown)
+22:16:14,942 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 119 32768
