@@ -7692,3 +7692,202 @@ TypeError: cors_proxify() missing 1 required positional argument: 'url'
 13:25:51,888 PIL.PngImagePlugin DEBUG STREAM b'bKGD' 101 6
 13:25:51,888 PIL.PngImagePlugin DEBUG b'bKGD' 101 6 (unknown)
 13:25:51,888 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 119 32768
+14:15:30,777 httpx._client DEBUG HTTP Request: GET https://animepahe.com/api?m=search&l=8&q=one+piece "HTTP/1.1 301 Moved Permanently"
+14:15:31,261 httpx._client DEBUG HTTP Request: GET https://animepahe.ru/api?m=search&l=8&q=one+piece "HTTP/1.1 200 OK"
+14:15:31,934 httpx._client DEBUG HTTP Request: GET https://9anime.pl/watch/one-piece.ov8 "HTTP/1.1 500 Internal Server Error"
+14:15:31,934 logging ERROR Failed to scrape 'https://9anime.pl/watch/one-piece.ov8' with AttributeError("'NoneType' object has no attribute 'group'")
+Traceback (most recent call last):
+  File "D:\a\animdl-provider-benchmarks\animdl-provider-benchmarks\generator.py", line 151, in attempt_scraping_for
+    for link_cb, _ in links:
+  File "C:\hostedtoolcache\windows\Python\3.9.13\x64\lib\site-packages\animdl\core\codebase\providers\nineanime\__init__.py", line 61, in fetcher
+    content_id = CONTENT_ID_REGEX.search(session.get(url).text).group(1)
+AttributeError: 'NoneType' object has no attribute 'group'
+14:15:31,949 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+14:15:31,949 PIL.PngImagePlugin DEBUG STREAM b'gAMA' 41 4
+14:15:31,949 PIL.PngImagePlugin DEBUG STREAM b'cHRM' 57 32
+14:15:31,949 PIL.PngImagePlugin DEBUG STREAM b'bKGD' 101 6
+14:15:31,949 PIL.PngImagePlugin DEBUG b'bKGD' 101 6 (unknown)
+14:15:31,949 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 119 32768
+14:15:32,358 httpx._client DEBUG HTTP Request: GET https://allanime.to/getVersion "HTTP/1.1 200 OK"
+14:15:33,0 httpx._client DEBUG HTTP Request: GET https://allanime.to/anime/ReooPAxPMsHM4KPMY "HTTP/1.1 200 OK"
+14:15:33,766 httpx._client DEBUG HTTP Request: GET https://api.allanime.co/allanimeapi?variables=%7B%22showId%22%3A+%22ReooPAxPMsHM4KPMY%22%2C+%22translationType%22%3A+%22sub%22%2C+%22episodeString%22%3A+%221%22%7D&extensions=%7B%22persistedQuery%22%3A+%7B%22version%22%3A+1%2C+%22sha256Hash%22%3A+%221f0a5d6c9ce6cd3127ee4efd304349345b0737fbf5ec33a60bbc3d18e3bb7c61%22%7D%7D "HTTP/1.1 200 OK"
+14:15:34,297 httpx._client DEBUG HTTP Request: GET https://allanimenews.com/apivtwo/clock.json?id=7d2473746a243c2429656b75297034295355294b35296469696b63746768612a65747368656e7f74696a6a2a6b696862692a686f656d75766a67722a70747075636a63657229706f6263697529415c32404b4351504d2975727463676b75242a2475727463676b63744f62243c245074242a2462677263243c24343634352b36352b36305237323c37333c3636283636365c242a2472746768756a67726f6968527f7663243c24757364247b "HTTP/1.1 200 OK"
+14:15:34,297 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+14:15:34,297 PIL.PngImagePlugin DEBUG STREAM b'gAMA' 41 4
+14:15:34,297 PIL.PngImagePlugin DEBUG STREAM b'cHRM' 57 32
+14:15:34,297 PIL.PngImagePlugin DEBUG STREAM b'bKGD' 101 6
+14:15:34,297 PIL.PngImagePlugin DEBUG b'bKGD' 101 6 (unknown)
+14:15:34,297 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 119 32768
+14:15:34,344 logging ERROR Failed to scrape 'https://animeout.xyz/download-one-piece-episodes-latest/' with TypeError("cors_proxify() missing 1 required positional argument: 'url'")
+Traceback (most recent call last):
+  File "D:\a\animdl-provider-benchmarks\animdl-provider-benchmarks\generator.py", line 151, in attempt_scraping_for
+    for link_cb, _ in links:
+  File "C:\hostedtoolcache\windows\Python\3.9.13\x64\lib\site-packages\animdl\core\codebase\providers\animeout\__init__.py", line 39, in fetcher
+    animeout_page = session.cf_request("GET", url)
+TypeError: cors_proxify() missing 1 required positional argument: 'url'
+14:15:34,344 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+14:15:34,344 PIL.PngImagePlugin DEBUG STREAM b'gAMA' 41 4
+14:15:34,344 PIL.PngImagePlugin DEBUG STREAM b'cHRM' 57 32
+14:15:34,344 PIL.PngImagePlugin DEBUG STREAM b'bKGD' 101 6
+14:15:34,344 PIL.PngImagePlugin DEBUG b'bKGD' 101 6 (unknown)
+14:15:34,344 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 119 32768
+14:15:34,672 httpx._client DEBUG HTTP Request: GET https://animtime.com/main.0eab142b791320871345.js "HTTP/1.1 200 OK"
+14:15:34,690 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+14:15:34,690 PIL.PngImagePlugin DEBUG STREAM b'gAMA' 41 4
+14:15:34,690 PIL.PngImagePlugin DEBUG STREAM b'cHRM' 57 32
+14:15:34,690 PIL.PngImagePlugin DEBUG STREAM b'bKGD' 101 6
+14:15:34,690 PIL.PngImagePlugin DEBUG b'bKGD' 101 6 (unknown)
+14:15:34,690 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 119 32768
+14:15:35,353 httpx._client DEBUG HTTP Request: GET https://gogoanime.cm/category/one-piece "HTTP/1.1 301 Moved Permanently"
+14:15:35,781 httpx._client DEBUG HTTP Request: GET https://gogoanime.ee/category/one-piece "HTTP/1.1 301 Moved Permanently"
+14:15:36,62 httpx._client DEBUG HTTP Request: GET http://www1.gogoanime.bid/category/one-piece "HTTP/1.1 301 Moved Permanently"
+14:15:36,484 httpx._client DEBUG HTTP Request: GET https://www1.gogoanime.bid/category/one-piece "HTTP/1.1 200 OK"
+14:15:36,844 httpx._client DEBUG HTTP Request: GET https://ajax.gogo-load.com/ajax/load-list-episode?ep_start=0&ep_end=100000&id=171 "HTTP/1.1 200 OK"
+14:15:37,157 httpx._client DEBUG HTTP Request: GET https://gogoanime.cm//one-piece-episode-1 "HTTP/1.1 301 Moved Permanently"
+14:15:37,331 httpx._client DEBUG HTTP Request: GET https://gogoanime.ee//one-piece-episode-1 "HTTP/1.1 301 Moved Permanently"
+14:15:37,351 httpx._client DEBUG HTTP Request: GET http://www1.gogoanime.bid//one-piece-episode-1 "HTTP/1.1 301 Moved Permanently"
+14:15:37,535 httpx._client DEBUG HTTP Request: GET https://www1.gogoanime.bid//one-piece-episode-1 "HTTP/1.1 200 OK"
+14:15:38,324 httpx._client DEBUG HTTP Request: GET https://anihdplay.com/streaming.php?id=MzUxOA==&title=One+Piece+Episode+1 "HTTP/1.1 200 OK"
+14:15:38,834 httpx._client DEBUG HTTP Request: GET https://anihdplay.com/encrypt-ajax.php?title=One+Piece+Episode+1&mip=0.0.0.0&refer=none&ch=d41d8cd98f00b204e9800998ecf8427e&token2=BjIbb5ivK8S46xaQAMWnjw&expires2=1678113938&op=1&id=3GIMFEERE2NXfAfB+mg4VQ==&alias=MzUxOA== "HTTP/1.1 200 OK"
+14:15:38,850 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+14:15:38,850 PIL.PngImagePlugin DEBUG STREAM b'gAMA' 41 4
+14:15:38,850 PIL.PngImagePlugin DEBUG STREAM b'cHRM' 57 32
+14:15:38,850 PIL.PngImagePlugin DEBUG STREAM b'bKGD' 101 6
+14:15:38,850 PIL.PngImagePlugin DEBUG b'bKGD' 101 6 (unknown)
+14:15:38,850 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 119 32768
+14:15:41,19 httpx._client DEBUG HTTP Request: GET https://bestanime3.xyz/tv-series/one-piece-720p-hd.html "HTTP/1.1 200 OK"
+14:15:41,127 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+14:15:41,127 PIL.PngImagePlugin DEBUG STREAM b'gAMA' 41 4
+14:15:41,127 PIL.PngImagePlugin DEBUG STREAM b'cHRM' 57 32
+14:15:41,127 PIL.PngImagePlugin DEBUG STREAM b'bKGD' 101 6
+14:15:41,127 PIL.PngImagePlugin DEBUG b'bKGD' 101 6 (unknown)
+14:15:41,127 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 119 32768
+14:15:42,816 httpx._client DEBUG HTTP Request: GET https://haho.moe/anime/sjmjiywi "HTTP/1.1 200 OK"
+14:15:44,114 httpx._client DEBUG HTTP Request: GET https://haho.moe/anime/sjmjiywi/1 "HTTP/1.1 200 OK"
+14:15:44,724 httpx._client DEBUG HTTP Request: GET https://haho.moe/embed?v=mcmxnvxm "HTTP/1.1 200 OK"
+14:15:44,740 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+14:15:44,740 PIL.PngImagePlugin DEBUG STREAM b'gAMA' 41 4
+14:15:44,740 PIL.PngImagePlugin DEBUG STREAM b'cHRM' 57 32
+14:15:44,740 PIL.PngImagePlugin DEBUG STREAM b'bKGD' 101 6
+14:15:44,740 PIL.PngImagePlugin DEBUG b'bKGD' 101 6 (unknown)
+14:15:44,740 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 119 32768
+14:15:45,537 logging ERROR Failed to scrape 'https://marin.moe/anime/fntoucz2' with ReadError('[SSL: DECRYPTION_FAILED_OR_BAD_RECORD_MAC] decryption failed or bad record mac (_ssl.c:2633)')
+Traceback (most recent call last):
+  File "C:\hostedtoolcache\windows\Python\3.9.13\x64\lib\site-packages\httpcore\_exceptions.py", line 10, in map_exceptions
+    yield
+  File "C:\hostedtoolcache\windows\Python\3.9.13\x64\lib\site-packages\httpcore\backends\sync.py", line 28, in read
+    return self._sock.recv(max_bytes)
+  File "C:\hostedtoolcache\windows\Python\3.9.13\x64\lib\ssl.py", line 1227, in recv
+    return self.read(buflen)
+  File "C:\hostedtoolcache\windows\Python\3.9.13\x64\lib\ssl.py", line 1102, in read
+    return self._sslobj.read(len)
+ssl.SSLError: [SSL: DECRYPTION_FAILED_OR_BAD_RECORD_MAC] decryption failed or bad record mac (_ssl.c:2633)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\hostedtoolcache\windows\Python\3.9.13\x64\lib\site-packages\httpx\_transports\default.py", line 60, in map_httpcore_exceptions
+    yield
+  File "C:\hostedtoolcache\windows\Python\3.9.13\x64\lib\site-packages\httpx\_transports\default.py", line 218, in handle_request
+    resp = self._pool.handle_request(req)
+  File "C:\hostedtoolcache\windows\Python\3.9.13\x64\lib\site-packages\httpcore\_sync\connection_pool.py", line 253, in handle_request
+    raise exc
+  File "C:\hostedtoolcache\windows\Python\3.9.13\x64\lib\site-packages\httpcore\_sync\connection_pool.py", line 237, in handle_request
+    response = connection.handle_request(request)
+  File "C:\hostedtoolcache\windows\Python\3.9.13\x64\lib\site-packages\httpcore\_sync\connection.py", line 90, in handle_request
+    return self._connection.handle_request(request)
+  File "C:\hostedtoolcache\windows\Python\3.9.13\x64\lib\site-packages\httpcore\_sync\http11.py", line 112, in handle_request
+    raise exc
+  File "C:\hostedtoolcache\windows\Python\3.9.13\x64\lib\site-packages\httpcore\_sync\http11.py", line 91, in handle_request
+    ) = self._receive_response_headers(**kwargs)
+  File "C:\hostedtoolcache\windows\Python\3.9.13\x64\lib\site-packages\httpcore\_sync\http11.py", line 155, in _receive_response_headers
+    event = self._receive_event(timeout=timeout)
+  File "C:\hostedtoolcache\windows\Python\3.9.13\x64\lib\site-packages\httpcore\_sync\http11.py", line 191, in _receive_event
+    data = self._network_stream.read(
+  File "C:\hostedtoolcache\windows\Python\3.9.13\x64\lib\site-packages\httpcore\backends\sync.py", line 28, in read
+    return self._sock.recv(max_bytes)
+  File "C:\hostedtoolcache\windows\Python\3.9.13\x64\lib\contextlib.py", line 137, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "C:\hostedtoolcache\windows\Python\3.9.13\x64\lib\site-packages\httpcore\_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc)
+httpcore.ReadError: [SSL: DECRYPTION_FAILED_OR_BAD_RECORD_MAC] decryption failed or bad record mac (_ssl.c:2633)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\a\animdl-provider-benchmarks\animdl-provider-benchmarks\generator.py", line 151, in attempt_scraping_for
+    for link_cb, _ in links:
+  File "C:\hostedtoolcache\windows\Python\3.9.13\x64\lib\site-packages\animdl\core\codebase\providers\marinmoe\__init__.py", line 74, in fetcher
+    anime_data = fetch_anime_data(session, url)
+  File "C:\hostedtoolcache\windows\Python\3.9.13\x64\lib\site-packages\animdl\core\codebase\providers\marinmoe\__init__.py", line 65, in fetch_anime_data
+    "x-inertia-version": get_inertia_version(session),
+  File "C:\hostedtoolcache\windows\Python\3.9.13\x64\lib\site-packages\animdl\core\codebase\providers\marinmoe\__init__.py", line 22, in get_inertia_version
+    response = session.get(MARIN)
+  File "C:\hostedtoolcache\windows\Python\3.9.13\x64\lib\site-packages\httpx\_client.py", line 1045, in get
+    return self.request(
+  File "C:\hostedtoolcache\windows\Python\3.9.13\x64\lib\site-packages\httpx\_client.py", line 821, in request
+    return self.send(request, auth=auth, follow_redirects=follow_redirects)
+  File "C:\hostedtoolcache\windows\Python\3.9.13\x64\lib\site-packages\httpx\_client.py", line 908, in send
+    response = self._send_handling_auth(
+  File "C:\hostedtoolcache\windows\Python\3.9.13\x64\lib\site-packages\httpx\_client.py", line 936, in _send_handling_auth
+    response = self._send_handling_redirects(
+  File "C:\hostedtoolcache\windows\Python\3.9.13\x64\lib\site-packages\httpx\_client.py", line 973, in _send_handling_redirects
+    response = self._send_single_request(request)
+  File "C:\hostedtoolcache\windows\Python\3.9.13\x64\lib\site-packages\httpx\_client.py", line 1009, in _send_single_request
+    response = transport.handle_request(request)
+  File "C:\hostedtoolcache\windows\Python\3.9.13\x64\lib\site-packages\httpx\_transports\default.py", line 218, in handle_request
+    resp = self._pool.handle_request(req)
+  File "C:\hostedtoolcache\windows\Python\3.9.13\x64\lib\contextlib.py", line 137, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "C:\hostedtoolcache\windows\Python\3.9.13\x64\lib\site-packages\httpx\_transports\default.py", line 77, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ReadError: [SSL: DECRYPTION_FAILED_OR_BAD_RECORD_MAC] decryption failed or bad record mac (_ssl.c:2633)
+14:15:45,678 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+14:15:45,678 PIL.PngImagePlugin DEBUG STREAM b'gAMA' 41 4
+14:15:45,678 PIL.PngImagePlugin DEBUG STREAM b'cHRM' 57 32
+14:15:45,678 PIL.PngImagePlugin DEBUG STREAM b'bKGD' 101 6
+14:15:45,678 PIL.PngImagePlugin DEBUG b'bKGD' 101 6 (unknown)
+14:15:45,678 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 119 32768
+14:15:46,132 httpx._client DEBUG HTTP Request: GET https://zoro.to/ajax/v2/episode/list/100 "HTTP/1.1 200 OK"
+14:15:46,725 httpx._client DEBUG HTTP Request: GET https://zoro.to/ajax/v2/episode/servers?episodeId=2142 "HTTP/1.1 200 OK"
+14:15:46,944 httpx._client DEBUG HTTP Request: GET https://zoro.to/ajax/v2/episode/sources?id=574667 "HTTP/1.1 200 OK"
+14:15:47,179 httpx._client DEBUG HTTP Request: GET https://zoro.to/ajax/v2/episode/sources?id=410640 "HTTP/1.1 200 OK"
+14:15:47,429 httpx._client DEBUG HTTP Request: GET https://zoro.to/ajax/v2/episode/sources?id=715550 "HTTP/1.1 200 OK"
+14:15:47,679 httpx._client DEBUG HTTP Request: GET https://zoro.to/ajax/v2/episode/sources?id=739554 "HTTP/1.1 200 OK"
+14:15:47,907 httpx._client DEBUG HTTP Request: GET https://zoro.to/ajax/v2/episode/sources?id=583679 "HTTP/1.1 200 OK"
+14:15:48,142 httpx._client DEBUG HTTP Request: GET https://zoro.to/ajax/v2/episode/sources?id=4145 "HTTP/1.1 200 OK"
+14:15:48,360 httpx._client DEBUG HTTP Request: GET https://zoro.to/ajax/v2/episode/sources?id=715498 "HTTP/1.1 200 OK"
+14:15:48,564 httpx._client DEBUG HTTP Request: GET https://zoro.to/ajax/v2/episode/sources?id=739502 "HTTP/1.1 200 OK"
+14:15:48,908 httpx._client DEBUG HTTP Request: GET https://rapid-cloud.co/ajax/embed-6/getSources?id=2xjiq2qRZV7o "HTTP/1.1 200 OK"
+14:15:49,168 httpx._client DEBUG HTTP Request: GET https://raw.githubusercontent.com/consumet/rapidclown/main/key.txt "HTTP/1.1 200 OK"
+14:15:49,168 further-extraction ERROR Extraction from 'rapidvideo' failed due to: ValueError('Padding is incorrect.').
+14:15:49,404 httpx._client DEBUG HTTP Request: GET https://rapid-cloud.co/ajax/embed-6/getSources?id=HzwbLJ9kXoGA "HTTP/1.1 200 OK"
+14:15:49,404 further-extraction ERROR Extraction from 'rapidvideo' failed due to: ValueError('PKCS#7 padding is incorrect.').
+14:15:49,638 httpx._client DEBUG HTTP Request: GET https://rapid-cloud.co/ajax/embed-6/getSources?id=R7YseDOOB2VN "HTTP/1.1 200 OK"
+14:15:49,638 further-extraction ERROR Extraction from 'rapidvideo' failed due to: ValueError('Padding is incorrect.').
+14:15:49,857 httpx._client DEBUG HTTP Request: GET https://rapid-cloud.co/ajax/embed-6/getSources?id=QEUT31dvsBBU "HTTP/1.1 200 OK"
+14:15:49,873 further-extraction ERROR Extraction from 'rapidvideo' failed due to: ValueError('Padding is incorrect.').
+14:15:49,873 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+14:15:49,873 PIL.PngImagePlugin DEBUG STREAM b'gAMA' 41 4
+14:15:49,873 PIL.PngImagePlugin DEBUG STREAM b'cHRM' 57 32
+14:15:49,873 PIL.PngImagePlugin DEBUG STREAM b'bKGD' 101 6
+14:15:49,873 PIL.PngImagePlugin DEBUG b'bKGD' 101 6 (unknown)
+14:15:49,873 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 119 32768
+14:15:50,217 httpx._client DEBUG HTTP Request: GET https://animepahe.com/anime/18b8e70b-f987-5dea-1220-553cfba0038d "HTTP/1.1 301 Moved Permanently"
+14:15:50,545 httpx._client DEBUG HTTP Request: GET https://animepahe.ru/anime/18b8e70b-f987-5dea-1220-553cfba0038d "HTTP/1.1 200 OK"
+14:15:50,881 httpx._client DEBUG HTTP Request: GET https://animepahe.com/api?m=release&id=18b8e70b-f987-5dea-1220-553cfba0038d&sort=episode_asc&page=1 "HTTP/1.1 301 Moved Permanently"
+14:15:51,148 httpx._client DEBUG HTTP Request: GET https://animepahe.ru/api?m=release&id=18b8e70b-f987-5dea-1220-553cfba0038d&sort=episode_asc&page=1 "HTTP/1.1 200 OK"
+14:15:51,366 httpx._client DEBUG HTTP Request: GET https://animepahe.com/play/18b8e70b-f987-5dea-1220-553cfba0038d/f779929c5a318697c92c316d624990434f2a4bf2a2786d7f40eb04bc6f4a4f43 "HTTP/1.1 301 Moved Permanently"
+14:15:51,648 httpx._client DEBUG HTTP Request: GET https://animepahe.ru/play/18b8e70b-f987-5dea-1220-553cfba0038d/f779929c5a318697c92c316d624990434f2a4bf2a2786d7f40eb04bc6f4a4f43 "HTTP/1.1 200 OK"
+14:15:52,644 httpx._client DEBUG HTTP Request: GET https://pahe.win/EqmUA "HTTP/1.1 200 OK"
+14:15:53,567 httpx._client DEBUG HTTP Request: GET https://kwik.cx/f/DHJBozjF1Usc "HTTP/1.1 200 OK"
+14:15:54,526 httpx._client DEBUG HTTP Request: POST https://kwik.cx/d/DHJBozjF1Usc "HTTP/1.1 302 Found"
+14:15:54,792 httpx._client DEBUG HTTP Request: GET https://pahe.win/fmkoo "HTTP/1.1 200 OK"
+14:15:55,50 httpx._client DEBUG HTTP Request: GET https://kwik.cx/f/pn0dcxtld4hk "HTTP/1.1 200 OK"
+14:15:56,96 httpx._client DEBUG HTTP Request: POST https://kwik.cx/d/pn0dcxtld4hk "HTTP/1.1 302 Found"
+14:15:56,105 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+14:15:56,105 PIL.PngImagePlugin DEBUG STREAM b'gAMA' 41 4
+14:15:56,105 PIL.PngImagePlugin DEBUG STREAM b'cHRM' 57 32
+14:15:56,112 PIL.PngImagePlugin DEBUG STREAM b'bKGD' 101 6
+14:15:56,112 PIL.PngImagePlugin DEBUG b'bKGD' 101 6 (unknown)
+14:15:56,112 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 119 32768
