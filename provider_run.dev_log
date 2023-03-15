@@ -20771,3 +20771,361 @@ json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
 09:17:04,34 PIL.PngImagePlugin DEBUG STREAM b'bKGD' 101 6
 09:17:04,34 PIL.PngImagePlugin DEBUG b'bKGD' 101 6 (unknown)
 09:17:04,34 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 119 32768
+10:17:00,464 httpx._client DEBUG HTTP Request: GET https://animepahe.com/api?m=search&l=8&q=one+piece "HTTP/1.1 301 Moved Permanently"
+10:17:01,120 httpx._client DEBUG HTTP Request: GET https://animepahe.ru/api?m=search&l=8&q=one+piece "HTTP/1.1 200 OK"
+10:17:01,964 httpx._client DEBUG HTTP Request: GET https://9anime.pl/watch/one-piece.ov8 "HTTP/1.1 200 OK"
+10:17:02,355 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/episode/list/177 "HTTP/1.1 200 OK"
+10:17:02,714 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/list/HzWYCg==,FTqaCw== "HTTP/1.1 200 OK"
+10:17:02,949 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/HTWXDconkg==/ "HTTP/1.1 200 OK"
+10:17:03,199 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/HTWXDconlQ==/ "HTTP/1.1 200 OK"
+10:17:03,433 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/HTWXDcoklQ==/ "HTTP/1.1 200 OK"
+10:17:03,668 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/HTWXDcollg==/ "HTTP/1.1 200 OK"
+10:17:03,918 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/HTWXDcokkg==/ "HTTP/1.1 200 OK"
+10:17:04,152 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/HTWWDsIjnw==/ "HTTP/1.1 200 OK"
+10:17:04,403 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/HTWWDsIjng==/ "HTTP/1.1 200 OK"
+10:17:04,637 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/HTWWDsIglA==/ "HTTP/1.1 200 OK"
+10:17:04,888 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/HTWWDsIhlg==/ "HTTP/1.1 200 OK"
+10:17:05,123 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/HTWWDsIgnw==/ "HTTP/1.1 200 OK"
+10:17:05,279 httpx._client DEBUG HTTP Request: GET https://raw.githubusercontent.com/AnimeJeff/Overflow/main/syek "HTTP/1.1 200 OK"
+10:17:05,763 httpx._client DEBUG HTTP Request: GET https://vidstream.pro//Nzur0bp5/822-792-76-64-37-061-033-011-89-96-012-051-511-411-87-69-822-88-611-201-202-261-901-58-101-841-042-94-79-96 "HTTP/1.1 200 OK"
+10:17:05,763 further-extraction ERROR Extraction from 'vidstream' failed due to: JSONDecodeError('Expecting value: line 1 column 1 (char 0)').
+10:17:06,170 httpx._client DEBUG HTTP Request: GET https://mcloud.to//Nzur0bp5/031-303-87-46-221-632-951-901-99-611-241-852-08-27-011 "HTTP/1.1 200 OK"
+10:17:06,170 further-extraction ERROR Extraction from 'mycloud' failed due to: JSONDecodeError('Expecting value: line 1 column 1 (char 0)').
+10:17:06,545 httpx._client DEBUG HTTP Request: GET https://streamtape.com/e/Y70BK8X986H2oV/?t=1678875423&h=9ef630a50c2ecb31266074a0310785a5 "HTTP/1.1 200 OK"
+10:17:06,702 httpx._client DEBUG HTTP Request: GET https://streamtape.com/get_video?id=Y70BK8X986H2oV&expires=1678945426&ip=GxOsD0STKxSHDN&token=ly2ygNYBr_Ho "HTTP/1.1 302 Found"
+10:17:06,968 httpx._client DEBUG HTTP Request: GET https://vidstream.pro//Nzur0bp5/812-003-15-88-301-091-582-411-79-79-491-702-011-501-001-202-633-35-18-88-422-222-46-811-701-002-822-811-99-96 "HTTP/1.1 200 OK"
+10:17:06,968 further-extraction ERROR Extraction from 'vidstream' failed due to: JSONDecodeError('Expecting value: line 1 column 1 (char 0)').
+10:17:07,218 httpx._client DEBUG HTTP Request: GET https://mcloud.to//Nzur0bp5/871-153-27-46-221-222-561-901-76-45-841-333-58-37-39 "HTTP/1.1 200 OK"
+10:17:07,218 further-extraction ERROR Extraction from 'mycloud' failed due to: JSONDecodeError('Expecting value: line 1 column 1 (char 0)').
+10:17:07,378 httpx._client DEBUG HTTP Request: GET https://streamtape.com/e/Me2a8gmy1mu6ZP/?t=1678875424&h=189c368badca943fc13389f303f7c0e1 "HTTP/1.1 200 OK"
+10:17:07,627 httpx._client DEBUG HTTP Request: GET https://streamtape.com/get_video?id=Me2a8gmy1mu6ZP&expires=1678945427&ip=GxOsD0STKxSHDN&token=UJt2HaNkSR2L "HTTP/1.1 302 Found"
+10:17:07,861 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/list/HzWYCw==,FTqaCA== "HTTP/1.1 200 OK"
+10:17:08,111 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/HTWXDcshlQ==/ "HTTP/1.1 200 OK"
+10:17:08,346 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/HTWXDcshlA==/ "HTTP/1.1 200 OK"
+10:17:08,596 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/HTWXDcshng==/ "HTTP/1.1 200 OK"
+10:17:08,834 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/HTWXDcsukQ==/ "HTTP/1.1 200 OK"
+10:17:09,84 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/HTWXDcsulQ==/ "HTTP/1.1 200 OK"
+10:17:09,316 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/HTWWDsIgkg==/ "HTTP/1.1 200 OK"
+10:17:09,563 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/HTWWDsIglQ==/ "HTTP/1.1 200 OK"
+10:17:09,813 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/HTWWDsIhkw==/ "HTTP/1.1 200 OK"
+10:17:10,47 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/HTWWDsIhng==/ "HTTP/1.1 200 OK"
+10:17:10,299 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/HTWWDsIhkQ==/ "HTTP/1.1 200 OK"
+10:17:10,543 httpx._client DEBUG HTTP Request: GET https://vidstream.pro//Nzur0bp5/402-582-58-64-69-091-033-47-59-14-651-351-301-79-48-202-822-87-401-17-251-003-74-011-09-081-822-94-79-96 "HTTP/1.1 200 OK"
+10:17:10,543 further-extraction ERROR Extraction from 'vidstream' failed due to: JSONDecodeError('Expecting value: line 1 column 1 (char 0)').
+10:17:10,808 httpx._client DEBUG HTTP Request: GET https://mcloud.to//Nzur0bp5/442-453-501-48-28-401-303-901-76-45-841-462-011-611-55 "HTTP/1.1 200 OK"
+10:17:10,808 further-extraction ERROR Extraction from 'mycloud' failed due to: JSONDecodeError('Expecting value: line 1 column 1 (char 0)').
+10:17:10,965 httpx._client DEBUG HTTP Request: GET https://streamtape.com/e/aoJj04JwGYux3oJ/?t=1678875428&h=d8e45587ed8863bc0feb1142355f63ed "HTTP/1.1 200 OK"
+10:17:11,213 httpx._client DEBUG HTTP Request: GET https://streamtape.com/get_video?id=aoJj04JwGYux3oJ&expires=1678945430&ip=GxOsD0STKxSHDN&token=EbMXSGk1oHO9 "HTTP/1.1 302 Found"
+10:17:11,461 httpx._client DEBUG HTTP Request: GET https://vidstream.pro//Nzur0bp5/812-003-18-64-37-841-033-47-05-88-491-441-37-96-95-202-822-88-27-28-422-042-901-58-18-612-513-08-69-301 "HTTP/1.1 200 OK"
+10:17:11,476 further-extraction ERROR Extraction from 'vidstream' failed due to: JSONDecodeError('Expecting value: line 1 column 1 (char 0)').
+10:17:11,723 httpx._client DEBUG HTTP Request: GET https://mcloud.to//Nzur0bp5/871-561-39-59-221-222-303-18-08-85-232-033-47-79-011 "HTTP/1.1 200 OK"
+10:17:11,723 further-extraction ERROR Extraction from 'mycloud' failed due to: JSONDecodeError('Expecting value: line 1 column 1 (char 0)').
+10:17:11,879 httpx._client DEBUG HTTP Request: GET https://streamtape.com/e/vw9QyMwbmaf4meO/?t=1678875429&h=fd3363bab691ba289797eabccc1821f8 "HTTP/1.1 200 OK"
+10:17:12,126 httpx._client DEBUG HTTP Request: GET https://streamtape.com/get_video?id=vw9QyMwbmaf4meO&expires=1678945431&ip=GxOsD0STKxSHDN&token=eS2_LBbZsWIF "HTTP/1.1 302 Found"
+10:17:12,376 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/list/HzWYCA==,FTqaCQ== "HTTP/1.1 200 OK"
+10:17:12,629 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/HTWXDconkQ==/ "HTTP/1.1 200 OK"
+10:17:12,864 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/HTWXDconkA==/ "HTTP/1.1 200 OK"
+10:17:13,117 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/HTWXDcokkw==/ "HTTP/1.1 200 OK"
+10:17:13,364 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/HTWXDcollw==/ "HTTP/1.1 200 OK"
+10:17:13,614 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/HTWXDcoknw==/ "HTTP/1.1 200 OK"
+10:17:13,856 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/HTWWAsMjlA==/ "HTTP/1.1 200 OK"
+10:17:14,108 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/HTWWAsMjlw==/ "HTTP/1.1 200 OK"
+10:17:14,359 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/HTWWAsMglQ==/ "HTTP/1.1 200 OK"
+10:17:14,612 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/HTWWAsMhnw==/ "HTTP/1.1 200 OK"
+10:17:14,864 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/HTWWAsMhlA==/ "HTTP/1.1 200 OK"
+10:17:15,99 httpx._client DEBUG HTTP Request: GET https://vidstream.pro//Nzur0bp5/812-072-18-64-85-061-033-47-59-35-211-102-99-39-87-071-522-67-97-88-422-222-901-58-101-841-552-87-011-301 "HTTP/1.1 200 OK"
+10:17:15,115 further-extraction ERROR Extraction from 'vidstream' failed due to: JSONDecodeError('Expecting value: line 1 column 1 (char 0)').
+10:17:15,352 httpx._client DEBUG HTTP Request: GET https://mcloud.to//Nzur0bp5/031-633-27-001-17-491-951-38-64-57-241-792-99-79-011 "HTTP/1.1 200 OK"
+10:17:15,367 further-extraction ERROR Extraction from 'mycloud' failed due to: JSONDecodeError('Expecting value: line 1 column 1 (char 0)').
+10:17:15,521 httpx._client DEBUG HTTP Request: GET https://streamtape.com/e/pDWWDQBM1DireAw/?t=1678875433&h=36e18eb7e6aa079fcb3e31a60b588588 "HTTP/1.1 200 OK"
+10:17:15,764 httpx._client DEBUG HTTP Request: GET https://streamtape.com/get_video?id=pDWWDQBM1DireAw&expires=1678945435&ip=GxOsD0STKxSHDN&token=aGUooTqrKrvf "HTTP/1.1 302 Found"
+10:17:16,27 httpx._client DEBUG HTTP Request: GET https://vidstream.pro//Nzur0bp5/402-582-58-64-69-091-033-47-59-14-651-351-301-79-48-461-651-35-18-08-651-642-74-011-09-081-822-94-79-96 "HTTP/1.1 200 OK"
+10:17:16,27 further-extraction ERROR Extraction from 'vidstream' failed due to: JSONDecodeError('Expecting value: line 1 column 1 (char 0)').
+10:17:16,277 httpx._client DEBUG HTTP Request: GET https://mcloud.to//Nzur0bp5/442-453-501-48-28-401-303-18-84-201-002-891-36-59-96 "HTTP/1.1 200 OK"
+10:17:16,277 further-extraction ERROR Extraction from 'mycloud' failed due to: JSONDecodeError('Expecting value: line 1 column 1 (char 0)').
+10:17:16,434 httpx._client DEBUG HTTP Request: GET https://streamtape.com/e/9XDxWmky6Psaewx/?t=1678875434&h=7d57608fd8e31789faeee1705fc39983 "HTTP/1.1 200 OK"
+10:17:16,685 httpx._client DEBUG HTTP Request: GET https://streamtape.com/get_video?id=9XDxWmky6Psaewx&expires=1678945436&ip=GxOsD0STKxSHDN&token=mO30aEM96TAM "HTTP/1.1 302 Found"
+10:17:16,955 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/list/HzWYCQ==,FTqaDg== "HTTP/1.1 200 OK"
+10:17:17,191 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/HTWXDcoklA==/ "HTTP/1.1 200 OK"
+10:17:17,437 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/HTWXDcoklw==/ "HTTP/1.1 200 OK"
+10:17:17,699 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/HTWXDcollQ==/ "HTTP/1.1 200 OK"
+10:17:17,930 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/HTWXDcolng==/ "HTTP/1.1 200 OK"
+10:17:18,182 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/HTWXDcolkA==/ "HTTP/1.1 200 OK"
+10:17:18,432 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/HTWWD8smkw==/ "HTTP/1.1 200 OK"
+10:17:18,682 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/HTWWD8smkg==/ "HTTP/1.1 200 OK"
+10:17:18,968 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/HTWWD8snnw==/ "HTTP/1.1 200 OK"
+10:17:19,241 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/HTWWD8sklQ==/ "HTTP/1.1 200 OK"
+10:17:19,473 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/HTWWD8sklw==/ "HTTP/1.1 200 OK"
+10:17:19,728 httpx._client DEBUG HTTP Request: GET https://vidstream.pro//Nzur0bp5/822-561-27-88-87-68-333-08-18-79-841-051-35-35-67-202-633-601-011-78-422-921-46-811-45-081-162-811-99-96 "HTTP/1.1 200 OK"
+10:17:19,728 further-extraction ERROR Extraction from 'vidstream' failed due to: JSONDecodeError('Expecting value: line 1 column 1 (char 0)').
+10:17:19,989 httpx._client DEBUG HTTP Request: GET https://mcloud.to//Nzur0bp5/431-363-79-48-84-032-561-15-64-57-241-561-08-27-011 "HTTP/1.1 200 OK"
+10:17:19,989 further-extraction ERROR Extraction from 'mycloud' failed due to: JSONDecodeError('Expecting value: line 1 column 1 (char 0)').
+10:17:20,145 httpx._client DEBUG HTTP Request: GET https://streamtape.com/e/akvlPJ4A3vs0QG/?t=1678875437&h=b8c1604728b19e9604eb88c4c7756491 "HTTP/1.1 200 OK"
+10:17:20,395 httpx._client DEBUG HTTP Request: GET https://streamtape.com/get_video?id=akvlPJ4A3vs0QG&expires=1678945440&ip=GxOsD0STKxSHDN&token=nRTOK0F1Anok "HTTP/1.1 302 Found"
+10:17:20,659 httpx._client DEBUG HTTP Request: GET https://vidstream.pro//Nzur0bp5/822-792-69-88-87-68-033-47-59-35-651-441-011-501-39-461-912-67-001-08-671-042-46-811-45-002-861-811-99-96 "HTTP/1.1 200 OK"
+10:17:20,659 further-extraction ERROR Extraction from 'vidstream' failed due to: JSONDecodeError('Expecting value: line 1 column 1 (char 0)').
+10:17:20,903 httpx._client DEBUG HTTP Request: GET https://mcloud.to//Nzur0bp5/68-513-27-46-221-632-951-07-64-301-412-792-411-59-48 "HTTP/1.1 200 OK"
+10:17:20,903 further-extraction ERROR Extraction from 'mycloud' failed due to: JSONDecodeError('Expecting value: line 1 column 1 (char 0)').
+10:17:21,63 httpx._client DEBUG HTTP Request: GET https://streamtape.com/e/VBale8jmGWIKeya/?t=1678875439&h=a942c57c17b207e4c91a0616f81e926a "HTTP/1.1 404 Not Found"
+10:17:21,171 streamtape-extractor WARNING Could not find stream links. The file was deleted.
+10:17:21,411 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/list/HzWYDg==,FTqaDw== "HTTP/1.1 200 OK"
+10:17:21,668 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/HTWXDcoilg==/ "HTTP/1.1 200 OK"
+10:17:21,894 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/HTWXDcolnw==/ "HTTP/1.1 200 OK"
+10:17:22,147 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/HTWXDcoinw==/ "HTTP/1.1 200 OK"
+10:17:22,404 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/HTWXDcojkA==/ "HTTP/1.1 200 OK"
+10:17:22,644 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/HTWXDcojlQ==/ "HTTP/1.1 200 OK"
+10:17:22,878 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/HTWWDsIvkg==/ "HTTP/1.1 200 OK"
+10:17:23,151 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/HTWWDsIvlQ==/ "HTTP/1.1 200 OK"
+10:17:23,393 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/HTWWD8smlQ==/ "HTTP/1.1 200 OK"
+10:17:23,628 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/HTWWD8snlg==/ "HTTP/1.1 200 OK"
+10:17:23,894 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/HTWWD8smng==/ "HTTP/1.1 200 OK"
+10:17:24,133 httpx._client DEBUG HTTP Request: GET https://vidstream.pro//Nzur0bp5/402-582-59-76-79-091-582-411-79-79-071-441-99-601-67-202-633-89-97-17-891-582-74-011-09-081-951-76-011-301 "HTTP/1.1 200 OK"
+10:17:24,148 further-extraction ERROR Extraction from 'vidstream' failed due to: JSONDecodeError('Expecting value: line 1 column 1 (char 0)').
+10:17:24,390 httpx._client DEBUG HTTP Request: GET https://mcloud.to//Nzur0bp5/431-003-39-35-84-851-951-18-84-321-011-462-76-901-021 "HTTP/1.1 200 OK"
+10:17:24,405 further-extraction ERROR Extraction from 'mycloud' failed due to: JSONDecodeError('Expecting value: line 1 column 1 (char 0)').
+10:17:24,563 httpx._client DEBUG HTTP Request: GET https://streamtape.com/e/e0dvglalmlFoD6/?t=1678875442&h=a549d4173eb4f95baeeb7f9c1f03c0d4 "HTTP/1.1 200 OK"
+10:17:24,815 httpx._client DEBUG HTTP Request: GET https://streamtape.com/get_video?id=e0dvglalmlFoD6&expires=1678945444&ip=GxOsD0STKxSHDN&token=7XPQTiVQutjx "HTTP/1.1 302 Found"
+10:17:25,71 httpx._client DEBUG HTTP Request: GET https://vidstream.pro//Nzur0bp5/402-582-86-89-37-061-582-76-911-14-841-441-37-501-87-251-792-87-25-08-691-921-74-94-901-002-612-87-27-96 "HTTP/1.1 200 OK"
+10:17:25,71 further-extraction ERROR Extraction from 'vidstream' failed due to: JSONDecodeError('Expecting value: line 1 column 1 (char 0)').
+10:17:25,321 httpx._client DEBUG HTTP Request: GET https://mcloud.to//Nzur0bp5/68-792-39-48-94-632-951-011-99-411-091-861-211-17-39 "HTTP/1.1 200 OK"
+10:17:25,321 further-extraction ERROR Extraction from 'mycloud' failed due to: JSONDecodeError('Expecting value: line 1 column 1 (char 0)').
+10:17:25,481 httpx._client DEBUG HTTP Request: GET https://streamtape.com/e/V6mMblaej2Izdz/?t=1678875443&h=31f33f57fc728a40eb1f0292e2589259 "HTTP/1.1 200 OK"
+10:17:25,731 httpx._client DEBUG HTTP Request: GET https://streamtape.com/get_video?id=V6mMblaej2Izdz&expires=1678945445&ip=GxOsD0STKxSHDN&token=cjreOfOlcaP5 "HTTP/1.1 302 Found"
+10:17:25,981 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/list/HzWYDw==,FTqaDA== "HTTP/1.1 200 OK"
+10:17:26,240 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/HTWXDcknkA==/ "HTTP/1.1 200 OK"
+10:17:26,504 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/HTWXDcknkw==/ "HTTP/1.1 200 OK"
+10:17:26,755 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/HTWXDckklQ==/ "HTTP/1.1 200 OK"
+10:17:27,0 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/HTWXDckkng==/ "HTTP/1.1 200 OK"
+10:17:27,262 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/HTWXDckkkQ==/ "HTTP/1.1 200 OK"
+10:17:27,516 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/HTWWDsIvlA==/ "HTTP/1.1 200 OK"
+10:17:27,761 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/HTWWDsIvlw==/ "HTTP/1.1 200 OK"
+10:17:28,7 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/HTWWD8smlw==/ "HTTP/1.1 200 OK"
+10:17:28,262 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/HTWWD8snkQ==/ "HTTP/1.1 200 OK"
+10:17:28,496 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/HTWWD8smnw==/ "HTTP/1.1 200 OK"
+10:17:28,746 httpx._client DEBUG HTTP Request: GET https://vidstream.pro//Nzur0bp5/822-792-38-38-301-412-333-08-18-79-251-441-37-89-48-461-792-87-011-78-211-921-901-58-101-841-012-56-011-301 "HTTP/1.1 200 OK"
+10:17:28,746 further-extraction ERROR Extraction from 'vidstream' failed due to: JSONDecodeError('Expecting value: line 1 column 1 (char 0)').
+10:17:29,14 httpx._client DEBUG HTTP Request: GET https://mcloud.to//Nzur0bp5/431-363-411-011-17-401-561-58-84-321-442-462-76-611-55 "HTTP/1.1 200 OK"
+10:17:29,19 further-extraction ERROR Extraction from 'mycloud' failed due to: JSONDecodeError('Expecting value: line 1 column 1 (char 0)').
+10:17:29,166 httpx._client DEBUG HTTP Request: GET https://streamtape.com/e/3kYAGrDDpPId768/?t=1678875446&h=c6fa7dc316589d8ede18bcd3985050ea "HTTP/1.1 404 Not Found"
+10:17:29,276 streamtape-extractor WARNING Could not find stream links. The file was deleted.
+10:17:29,533 httpx._client DEBUG HTTP Request: GET https://vidstream.pro//Nzur0bp5/822-561-97-76-79-091-333-38-79-08-491-663-901-27-35-461-942-35-18-94-222-582-74-011-09-081-543-88-89-96 "HTTP/1.1 200 OK"
+10:17:29,533 further-extraction ERROR Extraction from 'vidstream' failed due to: JSONDecodeError('Expecting value: line 1 column 1 (char 0)').
+10:17:29,767 httpx._client DEBUG HTTP Request: GET https://mcloud.to//Nzur0bp5/442-453-501-59-221-242-003-001-99-37-241-561-401-611-39 "HTTP/1.1 200 OK"
+10:17:29,783 further-extraction ERROR Extraction from 'mycloud' failed due to: JSONDecodeError('Expecting value: line 1 column 1 (char 0)').
+10:17:29,923 httpx._client DEBUG HTTP Request: GET https://streamtape.com/e/PLVpZjQlwoU0Kk8/?t=1678875448&h=d576d7749ec4750f4279e0e209838074 "HTTP/1.1 404 Not Found"
+10:17:30,36 streamtape-extractor WARNING Could not find stream links. The file was deleted.
+10:17:30,299 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/list/HzWYDA==,FTqaDQ== "HTTP/1.1 200 OK"
+10:17:30,540 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/HTWXDc0glw==/ "HTTP/1.1 200 OK"
+10:17:30,781 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/HTWXDc0glg==/ "HTTP/1.1 200 OK"
+10:17:31,38 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/HTWXDc0glQ==/ "HTTP/1.1 200 OK"
+10:17:31,278 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/HTWXDc0gkA==/ "HTTP/1.1 200 OK"
+10:17:31,521 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/HTWXDc0gkw==/ "HTTP/1.1 200 OK"
+10:17:31,787 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/HTWWD8sukA==/ "HTTP/1.1 200 OK"
+10:17:32,21 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/HTWWD8sukw==/ "HTTP/1.1 200 OK"
+10:17:32,265 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/HTWWD8svkA==/ "HTTP/1.1 200 OK"
+10:17:32,515 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/HTWWD8omlw==/ "HTTP/1.1 200 OK"
+10:17:32,769 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/HTWWD8omlg==/ "HTTP/1.1 200 OK"
+10:17:33,20 httpx._client DEBUG HTTP Request: GET https://vidstream.pro//Nzur0bp5/822-792-69-88-87-68-033-47-59-35-651-441-011-501-39-081-522-67-59-221-491-921-46-811-45-002-861-811-99-96 "HTTP/1.1 200 OK"
+10:17:33,20 further-extraction ERROR Extraction from 'vidstream' failed due to: JSONDecodeError('Expecting value: line 1 column 1 (char 0)').
+10:17:33,261 httpx._client DEBUG HTTP Request: GET https://mcloud.to//Nzur0bp5/68-513-27-46-221-632-951-07-99-37-601-462-99-79-011 "HTTP/1.1 200 OK"
+10:17:33,276 further-extraction ERROR Extraction from 'mycloud' failed due to: JSONDecodeError('Expecting value: line 1 column 1 (char 0)').
+10:17:33,433 httpx._client DEBUG HTTP Request: GET https://streamtape.com/e/M9jLzV91oQUmg09/?t=1678875451&h=44f4742293d1327154331178c2d78ffc "HTTP/1.1 200 OK"
+10:17:33,693 httpx._client DEBUG HTTP Request: GET https://streamtape.com/get_video?id=M9jLzV91oQUmg09&expires=1678945453&ip=GxOsD0STKxSHDN&token=1u2IR7p9sI4j "HTTP/1.1 302 Found"
+10:17:33,937 httpx._client DEBUG HTTP Request: GET https://vidstream.pro//Nzur0bp5/812-072-001-88-37-241-582-411-05-28-401-642-59-87-46-412-333-89-011-88-422-642-74-94-321-841-303-94-05-301 "HTTP/1.1 200 OK"
+10:17:33,953 further-extraction ERROR Extraction from 'vidstream' failed due to: JSONDecodeError('Expecting value: line 1 column 1 (char 0)').
+10:17:34,184 httpx._client DEBUG HTTP Request: GET https://mcloud.to//Nzur0bp5/871-513-25-001-511-632-951-58-84-35-011-633-411-37-55 "HTTP/1.1 200 OK"
+10:17:34,199 further-extraction ERROR Extraction from 'mycloud' failed due to: JSONDecodeError('Expecting value: line 1 column 1 (char 0)').
+10:17:34,356 httpx._client DEBUG HTTP Request: GET https://streamtape.com/e/3VV336j7aGCdeqr/?t=1678875452&h=6f2a9c858abb96c7bacec84658d6e324 "HTTP/1.1 200 OK"
+10:17:34,610 httpx._client DEBUG HTTP Request: GET https://streamtape.com/get_video?id=3VV336j7aGCdeqr&expires=1678945454&ip=GxOsD0STKxSHDN&token=RtNP3Tbx3kEJ "HTTP/1.1 302 Found"
+10:17:34,849 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/list/HzWYDQ==,FTqaAg== "HTTP/1.1 200 OK"
+10:17:35,103 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/HTWXDcogkw==/ "HTTP/1.1 200 OK"
+10:17:35,342 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/HTWXDcogkg==/ "HTTP/1.1 200 OK"
+10:17:35,589 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/HTWXDcohlA==/ "HTTP/1.1 200 OK"
+10:17:35,845 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/HTWXDcohkA==/ "HTTP/1.1 200 OK"
+10:17:36,87 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/HTWXDcohkw==/ "HTTP/1.1 200 OK"
+10:17:36,333 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/HTWWDsIvkA==/ "HTTP/1.1 200 OK"
+10:17:36,595 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/HTWWDsIvkw==/ "HTTP/1.1 200 OK"
+10:17:36,839 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/HTWWD8sknw==/ "HTTP/1.1 200 OK"
+10:17:37,72 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/HTWWD8sikg==/ "HTTP/1.1 200 OK"
+10:17:37,329 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/HTWWD8silg==/ "HTTP/1.1 200 OK"
+10:17:37,595 httpx._client DEBUG HTTP Request: GET https://vidstream.pro//Nzur0bp5/822-423-15-88-37-241-033-58-27-08-251-042-99-35-39-202-522-08-401-05-651-003-74-94-901-002-912-811-011-28 "HTTP/1.1 200 OK"
+10:17:37,595 further-extraction ERROR Extraction from 'vidstream' failed due to: JSONDecodeError('Expecting value: line 1 column 1 (char 0)').
+10:17:37,860 httpx._client DEBUG HTTP Request: GET https://mcloud.to//Nzur0bp5/431-453-96-17-511-641-951-58-84-611-232-462-411-59-48 "HTTP/1.1 200 OK"
+10:17:37,860 further-extraction ERROR Extraction from 'mycloud' failed due to: JSONDecodeError('Expecting value: line 1 column 1 (char 0)').
+10:17:38,17 httpx._client DEBUG HTTP Request: GET https://streamtape.com/e/wGjz9pAOyDhlO0/?t=1678875455&h=8b45ab297fea7197b71c60de0de64342 "HTTP/1.1 200 OK"
+10:17:38,273 httpx._client DEBUG HTTP Request: GET https://streamtape.com/get_video?id=wGjz9pAOyDhlO0&expires=1678945457&ip=GxOsD0STKxSHDN&token=xpwXOEkxzMXQ "HTTP/1.1 302 Found"
+10:17:38,537 httpx._client DEBUG HTTP Request: GET https://vidstream.pro//Nzur0bp5/812-072-18-64-37-061-333-08-18-39-801-441-37-87-39-69-633-601-011-78-051-582-74-94-321-841-813-08-79-96 "HTTP/1.1 200 OK"
+10:17:38,540 further-extraction ERROR Extraction from 'vidstream' failed due to: JSONDecodeError('Expecting value: line 1 column 1 (char 0)').
+10:17:38,776 httpx._client DEBUG HTTP Request: GET https://mcloud.to//Nzur0bp5/442-003-87-46-221-632-951-18-08-67-002-942-08-79-021 "HTTP/1.1 200 OK"
+10:17:38,792 further-extraction ERROR Extraction from 'mycloud' failed due to: JSONDecodeError('Expecting value: line 1 column 1 (char 0)').
+10:17:38,933 httpx._client DEBUG HTTP Request: GET https://streamtape.com/e/zDgAMwjRoJCYAO4/?t=1678875456&h=7fdaad29493bb69602e862a041e1228e "HTTP/1.1 404 Not Found"
+10:17:39,43 streamtape-extractor WARNING Could not find stream links. The file was deleted.
+10:17:39,301 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/list/HzWYAg==,FTqaAw== "HTTP/1.1 200 OK"
+10:17:39,536 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/HTWXDcoikw==/ "HTTP/1.1 200 OK"
+10:17:39,801 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/HTWXDcoikg==/ "HTTP/1.1 200 OK"
+10:17:40,29 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/HTWXDcojkg==/ "HTTP/1.1 200 OK"
+10:17:40,281 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/HTWXDcojng==/ "HTTP/1.1 200 OK"
+10:17:40,546 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/HTWXDcojkQ==/ "HTTP/1.1 200 OK"
+10:17:40,784 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/HTWWD8smkQ==/ "HTTP/1.1 200 OK"
+10:17:41,32 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/HTWWD8smkA==/ "HTTP/1.1 200 OK"
+10:17:41,288 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/HTWWD8skkg==/ "HTTP/1.1 200 OK"
+10:17:41,531 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/HTWWD8skkQ==/ "HTTP/1.1 200 OK"
+10:17:41,770 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/HTWWD8skkA==/ "HTTP/1.1 200 OK"
+10:17:42,20 httpx._client DEBUG HTTP Request: GET https://vidstream.pro//Nzur0bp5/822-792-69-88-301-091-333-08-17-14-491-852-301-79-46-422-363-88-97-301-002-582-901-011-321-002-003-84-35-96 "HTTP/1.1 200 OK"
+10:17:42,35 further-extraction ERROR Extraction from 'vidstream' failed due to: JSONDecodeError('Expecting value: line 1 column 1 (char 0)').
+10:17:42,285 httpx._client DEBUG HTTP Request: GET https://mcloud.to//Nzur0bp5/431-363-411-86-08-641-951-58-84-611-232-741-08-27-011 "HTTP/1.1 200 OK"
+10:17:42,285 further-extraction ERROR Extraction from 'mycloud' failed due to: JSONDecodeError('Expecting value: line 1 column 1 (char 0)').
+10:17:42,436 httpx._client DEBUG HTTP Request: GET https://streamtape.com/e/WD2W4M4gR4cbJkZ/?t=1678875460&h=5db464fb5c4aba48d1ba060c2a307b74 "HTTP/1.1 200 OK"
+10:17:42,693 httpx._client DEBUG HTTP Request: GET https://streamtape.com/get_video?id=WD2W4M4gR4cbJkZ&expires=1678945462&ip=GxOsD0STKxSHDN&token=iAiPVJD18ZZ8 "HTTP/1.1 302 Found"
+10:17:42,955 httpx._client DEBUG HTTP Request: GET https://vidstream.pro//Nzur0bp5/822-792-76-64-37-061-033-011-89-96-012-051-511-411-101-061-333-35-15-94-242-261-901-58-101-841-042-94-79-96 "HTTP/1.1 200 OK"
+10:17:42,955 further-extraction ERROR Extraction from 'vidstream' failed due to: JSONDecodeError('Expecting value: line 1 column 1 (char 0)').
+10:17:43,213 httpx._client DEBUG HTTP Request: GET https://mcloud.to//Nzur0bp5/031-303-87-46-221-632-951-901-99-321-011-582-011-67-48 "HTTP/1.1 200 OK"
+10:17:43,213 further-extraction ERROR Extraction from 'mycloud' failed due to: JSONDecodeError('Expecting value: line 1 column 1 (char 0)').
+10:17:43,368 httpx._client DEBUG HTTP Request: GET https://streamtape.com/e/KkJeWPbKjbSAOY/?t=1678875461&h=e0255b12a736449352d2825546e34025 "HTTP/1.1 200 OK"
+10:17:43,619 httpx._client DEBUG HTTP Request: GET https://streamtape.com/get_video?id=KkJeWPbKjbSAOY&expires=1678945463&ip=GxOsD0STKxSHDN&token=O2lK4FWC3TmE "HTTP/1.1 302 Found"
+10:17:43,888 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/list/HzWYAw==,FTqZCg== "HTTP/1.1 200 OK"
+10:17:44,150 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/HTWXDcomkQ==/ "HTTP/1.1 200 OK"
+10:17:44,386 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/HTWXDcomkA==/ "HTTP/1.1 200 OK"
+10:17:44,661 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/HTWXDconlw==/ "HTTP/1.1 200 OK"
+10:17:44,905 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/HTWXDconnw==/ "HTTP/1.1 200 OK"
+10:17:45,157 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/HTWXDconkw==/ "HTTP/1.1 200 OK"
+10:17:45,403 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/HTWWD8ghkw==/ "HTTP/1.1 200 OK"
+10:17:45,645 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/HTWWD8ghkg==/ "HTTP/1.1 200 OK"
+10:17:45,902 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/HTWWD8gulA==/ "HTTP/1.1 200 OK"
+10:17:46,148 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/HTWWD8gukA==/ "HTTP/1.1 200 OK"
+10:17:46,379 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/HTWWD8gukg==/ "HTTP/1.1 200 OK"
+10:17:46,641 httpx._client DEBUG HTTP Request: GET https://vidstream.pro//Nzur0bp5/812-072-18-64-37-061-333-08-18-39-801-441-37-87-15-422-363-88-27-05-691-921-74-94-321-841-813-08-79-96 "HTTP/1.1 200 OK"
+10:17:46,641 further-extraction ERROR Extraction from 'vidstream' failed due to: JSONDecodeError('Expecting value: line 1 column 1 (char 0)').
+10:17:46,894 httpx._client DEBUG HTTP Request: GET https://mcloud.to//Nzur0bp5/442-003-87-46-221-632-951-18-84-311-061-852-94-611-96 "HTTP/1.1 200 OK"
+10:17:46,898 further-extraction ERROR Extraction from 'mycloud' failed due to: JSONDecodeError('Expecting value: line 1 column 1 (char 0)').
+10:17:47,55 httpx._client DEBUG HTTP Request: GET https://streamtape.com/e/KPeq8zdxBrczAV/?t=1678875464&h=ee36e064980963b19ef641996ca47728 "HTTP/1.1 200 OK"
+10:17:47,291 httpx._client DEBUG HTTP Request: GET https://streamtape.com/get_video?id=KPeq8zdxBrczAV&expires=1678945466&ip=GxOsD0STKxSHDN&token=eWib4ceKgR7Q "HTTP/1.1 302 Found"
+10:17:47,548 httpx._client DEBUG HTTP Request: GET https://vidstream.pro//Nzur0bp5/812-072-18-84-201-412-582-411-59-14-641-051-511-79-48-202-522-08-14-78-051-582-74-011-09-081-951-88-901-301 "HTTP/1.1 200 OK"
+10:17:47,548 further-extraction ERROR Extraction from 'vidstream' failed due to: JSONDecodeError('Expecting value: line 1 column 1 (char 0)').
+10:17:47,804 httpx._client DEBUG HTTP Request: GET https://mcloud.to//Nzur0bp5/812-522-501-86-94-222-003-14-99-87-011-333-011-45-39 "HTTP/1.1 200 OK"
+10:17:47,804 further-extraction ERROR Extraction from 'mycloud' failed due to: JSONDecodeError('Expecting value: line 1 column 1 (char 0)').
+10:17:47,962 httpx._client DEBUG HTTP Request: GET https://streamtape.com/e/VdRKAWA0YXIKMPO/?t=1678875466&h=bee69747eb648069e7c61243df488d58 "HTTP/1.1 200 OK"
+10:17:48,212 httpx._client DEBUG HTTP Request: GET https://streamtape.com/get_video?id=VdRKAWA0YXIKMPO&expires=1678945467&ip=GxOsD0STKxSHDN&token=hrDUHPhaJxOT "HTTP/1.1 302 Found"
+10:17:48,475 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/list/HzWXCg==,FTqZCw== "HTTP/1.1 200 OK"
+10:17:48,722 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/HTWXDcomlg==/ "HTTP/1.1 200 OK"
+10:17:48,957 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/HTWXDcsvnw==/ "HTTP/1.1 200 OK"
+10:17:49,220 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/HTWXDcomng==/ "HTTP/1.1 200 OK"
+10:17:49,462 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/HTWXDconlA==/ "HTTP/1.1 200 OK"
+10:17:49,696 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/HTWXDconlg==/ "HTTP/1.1 200 OK"
+10:17:49,959 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/HTWWD8omlQ==/ "HTTP/1.1 200 OK"
+10:17:50,204 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/HTWWD8omlA==/ "HTTP/1.1 200 OK"
+10:17:50,449 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/HTWWD8omkQ==/ "HTTP/1.1 200 OK"
+10:17:50,687 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/HTWWD8onkg==/ "HTTP/1.1 200 OK"
+10:17:50,924 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/HTWWD8onlg==/ "HTTP/1.1 200 OK"
+10:17:51,186 httpx._client DEBUG HTTP Request: GET https://vidstream.pro//Nzur0bp5/402-582-86-89-37-061-582-76-911-14-841-441-37-501-87-461-651-99-59-78-251-003-74-94-901-002-612-87-27-96 "HTTP/1.1 200 OK"
+10:17:51,186 further-extraction ERROR Extraction from 'vidstream' failed due to: JSONDecodeError('Expecting value: line 1 column 1 (char 0)').
+10:17:51,443 httpx._client DEBUG HTTP Request: GET https://mcloud.to//Nzur0bp5/68-792-39-48-94-632-951-18-08-69-841-741-011-59-48 "HTTP/1.1 200 OK"
+10:17:51,443 further-extraction ERROR Extraction from 'mycloud' failed due to: JSONDecodeError('Expecting value: line 1 column 1 (char 0)').
+10:17:51,600 httpx._client DEBUG HTTP Request: GET https://streamtape.com/e/lWRRgKVodqc7kKP/?t=1678875469&h=57b955e1e9de093ab63e0cdcc60a511f "HTTP/1.1 200 OK"
+10:17:51,852 httpx._client DEBUG HTTP Request: GET https://streamtape.com/get_video?id=lWRRgKVodqc7kKP&expires=1678945471&ip=GxOsD0STKxSHDN&token=di7NizWnk-3f "HTTP/1.1 302 Found"
+10:17:52,114 httpx._client DEBUG HTTP Request: GET https://vidstream.pro//Nzur0bp5/822-423-25-99-87-002-582-411-05-88-401-441-37-501-87-081-822-87-14-08-671-042-74-011-85-601-162-811-99-96 "HTTP/1.1 200 OK"
+10:17:52,114 further-extraction ERROR Extraction from 'vidstream' failed due to: JSONDecodeError('Expecting value: line 1 column 1 (char 0)').
+10:17:52,355 httpx._client DEBUG HTTP Request: GET https://mcloud.to//Nzur0bp5/812-633-27-46-221-222-003-14-47-69-061-633-64-67-011 "HTTP/1.1 200 OK"
+10:17:52,355 further-extraction ERROR Extraction from 'mycloud' failed due to: JSONDecodeError('Expecting value: line 1 column 1 (char 0)').
+10:17:52,508 httpx._client DEBUG HTTP Request: GET https://streamtape.com/e/BzYDoB6xJRuKz7/?t=1678875470&h=509c0a865b7307ac00d796a0b1b6c58c "HTTP/1.1 200 OK"
+10:17:52,764 httpx._client DEBUG HTTP Request: GET https://streamtape.com/get_video?id=BzYDoB6xJRuKz7&expires=1678945472&ip=GxOsD0STKxSHDN&token=zmOGkUUkbsDk "HTTP/1.1 302 Found"
+10:17:53,21 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/list/HzWXCw==,FTqZCA== "HTTP/1.1 200 OK"
+10:17:53,278 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/HTWXDcoikQ==/ "HTTP/1.1 200 OK"
+10:17:53,517 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/HTWXDcoikA==/ "HTTP/1.1 200 OK"
+10:17:53,766 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/HTWXDcojnw==/ "HTTP/1.1 200 OK"
+10:17:54,58 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/HTWXDcoglw==/ "HTTP/1.1 200 OK"
+10:17:54,295 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/HTWXDcoglg==/ "HTTP/1.1 200 OK"
+10:17:54,542 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/HTWWD8onlA==/ "HTTP/1.1 200 OK"
+10:17:54,778 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/HTWWD8onlw==/ "HTTP/1.1 200 OK"
+10:17:55,24 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/HTWWD8onkQ==/ "HTTP/1.1 200 OK"
+10:17:55,291 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/HTWWD8oklg==/ "HTTP/1.1 200 OK"
+10:17:55,512 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/HTWWD8onnw==/ "HTTP/1.1 200 OK"
+10:17:55,774 httpx._client DEBUG HTTP Request: GET https://vidstream.pro//Nzur0bp5/822-792-69-88-87-68-033-47-59-35-651-441-011-501-39-081-522-67-58-08-211-582-46-811-45-002-861-811-99-96 "HTTP/1.1 200 OK"
+10:17:55,774 further-extraction ERROR Extraction from 'vidstream' failed due to: JSONDecodeError('Expecting value: line 1 column 1 (char 0)').
+10:17:56,26 httpx._client DEBUG HTTP Request: GET https://mcloud.to//Nzur0bp5/68-513-27-46-221-632-951-07-99-37-601-741-411-99-021 "HTTP/1.1 200 OK"
+10:17:56,26 further-extraction ERROR Extraction from 'mycloud' failed due to: JSONDecodeError('Expecting value: line 1 column 1 (char 0)').
+10:17:56,182 httpx._client DEBUG HTTP Request: GET https://streamtape.com/e/g21PoBRzmgcq6OB/?t=1678875473&h=938013700d58a908d24cd321cc5bb603 "HTTP/1.1 200 OK"
+10:17:56,443 httpx._client DEBUG HTTP Request: GET https://streamtape.com/get_video?id=g21PoBRzmgcq6OB&expires=1678945476&ip=GxOsD0STKxSHDN&token=Ht9XAPFe7GYo "HTTP/1.1 302 Found"
+10:17:56,693 httpx._client DEBUG HTTP Request: GET https://vidstream.pro//Nzur0bp5/812-072-18-84-201-412-582-411-59-14-641-051-511-79-48-202-522-08-69-05-211-582-74-011-09-081-951-88-901-301 "HTTP/1.1 200 OK"
+10:17:56,693 further-extraction ERROR Extraction from 'vidstream' failed due to: JSONDecodeError('Expecting value: line 1 column 1 (char 0)').
+10:17:56,951 httpx._client DEBUG HTTP Request: GET https://mcloud.to//Nzur0bp5/812-522-501-86-94-222-003-14-47-67-011-333-811-59-39 "HTTP/1.1 200 OK"
+10:17:56,951 further-extraction ERROR Extraction from 'mycloud' failed due to: JSONDecodeError('Expecting value: line 1 column 1 (char 0)').
+10:17:57,102 httpx._client DEBUG HTTP Request: GET https://streamtape.com/e/m3dlMjXjlqtb8Kg/?t=1678875475&h=d2a55ae160fa427646fcedca656f7ec8 "HTTP/1.1 200 OK"
+10:17:57,361 httpx._client DEBUG HTTP Request: GET https://streamtape.com/get_video?id=m3dlMjXjlqtb8Kg&expires=1678945477&ip=GxOsD0STKxSHDN&token=VoP6NzZk_zl9 "HTTP/1.1 302 Found"
+10:17:57,609 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/list/HzWXCA==,FTqZCQ== "HTTP/1.1 200 OK"
+10:17:57,874 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/HTWXDcohlg==/ "HTTP/1.1 200 OK"
+10:17:58,118 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/HTWXDcognw==/ "HTTP/1.1 200 OK"
+10:17:58,353 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/HTWXDcoulw==/ "HTTP/1.1 200 OK"
+10:17:58,610 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/HTWXDcounw==/ "HTTP/1.1 200 OK"
+10:17:58,861 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/HTWXDcoukw==/ "HTTP/1.1 200 OK"
+10:17:59,109 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/HTWWD8shlA==/ "HTTP/1.1 200 OK"
+10:17:59,365 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/HTWWD8shlw==/ "HTTP/1.1 200 OK"
+10:17:59,591 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/HTWWD8shkA==/ "HTTP/1.1 200 OK"
+10:17:59,837 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/HTWWD8sukg==/ "HTTP/1.1 200 OK"
+10:18:00,96 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/server/HTWWD8shnw==/ "HTTP/1.1 200 OK"
+10:18:00,344 httpx._client DEBUG HTTP Request: GET https://vidstream.pro//Nzur0bp5/822-792-401-76-79-68-033-58-27-08-801-351-05-35-15-422-453-08-401-05-671-042-901-58-101-841-123-76-901-021 "HTTP/1.1 200 OK"
+10:18:00,344 further-extraction ERROR Extraction from 'vidstream' failed due to: JSONDecodeError('Expecting value: line 1 column 1 (char 0)').
+10:18:00,598 httpx._client DEBUG HTTP Request: GET https://mcloud.to//Nzur0bp5/871-651-88-77-76-051-951-58-84-321-442-891-14-011-021 "HTTP/1.1 200 OK"
+10:18:00,598 further-extraction ERROR Extraction from 'mycloud' failed due to: JSONDecodeError('Expecting value: line 1 column 1 (char 0)').
+10:18:00,754 httpx._client DEBUG HTTP Request: GET https://streamtape.com/e/4q0BkpGOeZiK447/?t=1678875478&h=c034680b37f75a01fb0a76639380da30 "HTTP/1.1 200 OK"
+10:18:01,17 httpx._client DEBUG HTTP Request: GET https://streamtape.com/get_video?id=4q0BkpGOeZiK447&expires=1678945480&ip=GxOsD0STKxSHDN&token=h4QqlEkzlS5Q "HTTP/1.1 302 Found"
+10:18:01,127 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+10:18:01,127 PIL.PngImagePlugin DEBUG STREAM b'gAMA' 41 4
+10:18:01,127 PIL.PngImagePlugin DEBUG STREAM b'cHRM' 57 32
+10:18:01,127 PIL.PngImagePlugin DEBUG STREAM b'bKGD' 101 6
+10:18:01,127 PIL.PngImagePlugin DEBUG b'bKGD' 101 6 (unknown)
+10:18:01,127 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 119 32768
+10:18:01,158 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+10:18:01,158 PIL.PngImagePlugin DEBUG STREAM b'gAMA' 41 4
+10:18:01,158 PIL.PngImagePlugin DEBUG STREAM b'cHRM' 57 32
+10:18:01,158 PIL.PngImagePlugin DEBUG STREAM b'bKGD' 101 6
+10:18:01,158 PIL.PngImagePlugin DEBUG b'bKGD' 101 6 (unknown)
+10:18:01,158 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 119 32768
+10:18:01,189 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+10:18:01,189 PIL.PngImagePlugin DEBUG STREAM b'gAMA' 41 4
+10:18:01,189 PIL.PngImagePlugin DEBUG STREAM b'cHRM' 57 32
+10:18:01,189 PIL.PngImagePlugin DEBUG STREAM b'bKGD' 101 6
+10:18:01,189 PIL.PngImagePlugin DEBUG b'bKGD' 101 6 (unknown)
+10:18:01,189 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 119 32768
+10:18:01,236 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+10:18:01,236 PIL.PngImagePlugin DEBUG STREAM b'gAMA' 41 4
+10:18:01,236 PIL.PngImagePlugin DEBUG STREAM b'cHRM' 57 32
+10:18:01,236 PIL.PngImagePlugin DEBUG STREAM b'bKGD' 101 6
+10:18:01,236 PIL.PngImagePlugin DEBUG b'bKGD' 101 6 (unknown)
+10:18:01,236 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 119 32768
+10:18:01,267 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+10:18:01,267 PIL.PngImagePlugin DEBUG STREAM b'gAMA' 41 4
+10:18:01,267 PIL.PngImagePlugin DEBUG STREAM b'cHRM' 57 32
+10:18:01,267 PIL.PngImagePlugin DEBUG STREAM b'bKGD' 101 6
+10:18:01,267 PIL.PngImagePlugin DEBUG b'bKGD' 101 6 (unknown)
+10:18:01,267 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 119 32768
+10:18:01,298 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+10:18:01,298 PIL.PngImagePlugin DEBUG STREAM b'gAMA' 41 4
+10:18:01,298 PIL.PngImagePlugin DEBUG STREAM b'cHRM' 57 32
+10:18:01,298 PIL.PngImagePlugin DEBUG STREAM b'bKGD' 101 6
+10:18:01,298 PIL.PngImagePlugin DEBUG b'bKGD' 101 6 (unknown)
+10:18:01,298 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 119 32768
+10:18:01,330 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+10:18:01,330 PIL.PngImagePlugin DEBUG STREAM b'gAMA' 41 4
+10:18:01,330 PIL.PngImagePlugin DEBUG STREAM b'cHRM' 57 32
+10:18:01,330 PIL.PngImagePlugin DEBUG STREAM b'bKGD' 101 6
+10:18:01,330 PIL.PngImagePlugin DEBUG b'bKGD' 101 6 (unknown)
+10:18:01,330 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 119 32768
+10:18:01,361 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+10:18:01,361 PIL.PngImagePlugin DEBUG STREAM b'gAMA' 41 4
+10:18:01,361 PIL.PngImagePlugin DEBUG STREAM b'cHRM' 57 32
+10:18:01,361 PIL.PngImagePlugin DEBUG STREAM b'bKGD' 101 6
+10:18:01,361 PIL.PngImagePlugin DEBUG b'bKGD' 101 6 (unknown)
+10:18:01,361 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 119 32768
+10:18:01,392 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+10:18:01,392 PIL.PngImagePlugin DEBUG STREAM b'gAMA' 41 4
+10:18:01,392 PIL.PngImagePlugin DEBUG STREAM b'cHRM' 57 32
+10:18:01,392 PIL.PngImagePlugin DEBUG STREAM b'bKGD' 101 6
+10:18:01,392 PIL.PngImagePlugin DEBUG b'bKGD' 101 6 (unknown)
+10:18:01,392 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 119 32768
+10:18:01,423 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+10:18:01,423 PIL.PngImagePlugin DEBUG STREAM b'gAMA' 41 4
+10:18:01,423 PIL.PngImagePlugin DEBUG STREAM b'cHRM' 57 32
+10:18:01,423 PIL.PngImagePlugin DEBUG STREAM b'bKGD' 101 6
+10:18:01,423 PIL.PngImagePlugin DEBUG b'bKGD' 101 6 (unknown)
+10:18:01,423 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 119 32768
