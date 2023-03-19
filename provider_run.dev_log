@@ -5075,3 +5075,119 @@ AttributeError: 'NoneType' object has no attribute 'group'
 16:20:07,188 PIL.PngImagePlugin DEBUG STREAM b'bKGD' 101 6
 16:20:07,188 PIL.PngImagePlugin DEBUG b'bKGD' 101 6 (unknown)
 16:20:07,188 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 119 32768
+17:12:55,531 httpx._client DEBUG HTTP Request: GET https://animepahe.com/api?m=search&l=8&q=one+piece "HTTP/1.1 301 Moved Permanently"
+17:12:56,0 httpx._client DEBUG HTTP Request: GET https://animepahe.ru/api?m=search&l=8&q=one+piece "HTTP/1.1 200 OK"
+17:12:56,688 httpx._client DEBUG HTTP Request: GET https://9anime.pl/watch/one-piece.ov8 "HTTP/1.1 200 OK"
+17:12:56,688 logging ERROR Failed to scrape 'https://9anime.pl/watch/one-piece.ov8' with AttributeError("'NoneType' object has no attribute 'group'")
+Traceback (most recent call last):
+  File "D:\a\animdl-provider-benchmarks\animdl-provider-benchmarks\generator.py", line 151, in attempt_scraping_for
+    for link_cb, _ in links:
+  File "C:\hostedtoolcache\windows\Python\3.9.13\x64\lib\site-packages\animdl\core\codebase\providers\nineanime\__init__.py", line 61, in fetcher
+    content_id = CONTENT_ID_REGEX.search(session.get(url).text).group(1)
+AttributeError: 'NoneType' object has no attribute 'group'
+17:12:56,688 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+17:12:56,688 PIL.PngImagePlugin DEBUG STREAM b'gAMA' 41 4
+17:12:56,688 PIL.PngImagePlugin DEBUG STREAM b'cHRM' 57 32
+17:12:56,688 PIL.PngImagePlugin DEBUG STREAM b'bKGD' 101 6
+17:12:56,688 PIL.PngImagePlugin DEBUG b'bKGD' 101 6 (unknown)
+17:12:56,688 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 119 32768
+17:12:56,922 httpx._client DEBUG HTTP Request: GET https://allanime.to/getVersion "HTTP/1.1 200 OK"
+17:12:57,282 httpx._client DEBUG HTTP Request: GET https://api.allanime.co/allanimeapi?variables=%7B%22showId%22%3A+%22ReooPAxPMsHM4KPMY%22%7D&query=%0Aquery+%28%24showId%3A+String%21%29+%7B%0A++++show%28%0A++++++++_id%3A+%24showId%0A++++%29+%7B%0A++++++++_id+name+availableEpisodesDetail%0A++++%7D%0A%7D%0A "HTTP/1.1 200 OK"
+17:12:57,616 httpx._client DEBUG HTTP Request: GET https://api.allanime.co/allanimeapi?variables=%7B%22showId%22%3A+%22ReooPAxPMsHM4KPMY%22%2C+%22translationType%22%3A+%22sub%22%2C+%22episodeString%22%3A+%221%22%7D&query=query+%28%24showId%3A+String%21%2C+%24translationType%3A+VaildTranslationTypeEnumType%21%2C+%24episodeString%3A+String%21%29+%7B%0A++++episode%28%0A++++++++showId%3A+%24showId%0A++++++++translationType%3A+%24translationType%0A++++++++episodeString%3A+%24episodeString%0A++++%29+%7B%0A++++++++episodeString+sourceUrls+notes%0A++++%7D%0A%7D "HTTP/1.1 200 OK"
+17:12:57,736 httpx._client DEBUG HTTP Request: GET https://allanimenews.com/apivtwo/clock.json?id=7d2473746a243c2429656b75297034295355294b35296469696b63746768612a65747368656e7f74696a6a2a6b696862692a686f656d75766a67722a70747075636a63657229706f6263697529415c32404b4351504d2975727463676b75242a2475727463676b63744f62243c245074242a2462677263243c24343634352b36352b373f5237313c37343c3636283636365c242a2472746768756a67726f6968527f7663243c24757364247b "HTTP/1.1 200 OK"
+17:12:57,751 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+17:12:57,751 PIL.PngImagePlugin DEBUG STREAM b'gAMA' 41 4
+17:12:57,751 PIL.PngImagePlugin DEBUG STREAM b'cHRM' 57 32
+17:12:57,751 PIL.PngImagePlugin DEBUG STREAM b'bKGD' 101 6
+17:12:57,751 PIL.PngImagePlugin DEBUG b'bKGD' 101 6 (unknown)
+17:12:57,751 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 119 32768
+17:12:58,408 httpx._client DEBUG HTTP Request: GET https://corsproxy.io/?https%3A//www.animeout.xyz/download-one-piece-episodes-latest/ "HTTP/1.1 200 OK"
+17:13:12,40 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+17:13:12,40 PIL.PngImagePlugin DEBUG STREAM b'gAMA' 41 4
+17:13:12,40 PIL.PngImagePlugin DEBUG STREAM b'cHRM' 57 32
+17:13:12,40 PIL.PngImagePlugin DEBUG STREAM b'bKGD' 101 6
+17:13:12,40 PIL.PngImagePlugin DEBUG b'bKGD' 101 6 (unknown)
+17:13:12,40 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 119 32768
+17:13:12,259 httpx._client DEBUG HTTP Request: GET https://animtime.com/ "HTTP/1.1 200 OK"
+17:13:12,290 httpx._client DEBUG HTTP Request: GET https://animtime.com/main.2949ae63db158a24c049.js "HTTP/1.1 200 OK"
+17:13:12,368 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+17:13:12,368 PIL.PngImagePlugin DEBUG STREAM b'gAMA' 41 4
+17:13:12,368 PIL.PngImagePlugin DEBUG STREAM b'cHRM' 57 32
+17:13:12,368 PIL.PngImagePlugin DEBUG STREAM b'bKGD' 101 6
+17:13:12,368 PIL.PngImagePlugin DEBUG b'bKGD' 101 6 (unknown)
+17:13:12,368 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 119 32768
+17:13:12,668 httpx._client DEBUG HTTP Request: GET https://gogoanime.bid/category/one-piece "HTTP/1.1 301 Moved Permanently"
+17:13:12,910 httpx._client DEBUG HTTP Request: GET https://gogoanime.gr/category/one-piece "HTTP/1.1 200 OK"
+17:13:13,292 httpx._client DEBUG HTTP Request: GET https://ajax.gogo-load.com/ajax/load-list-episode?ep_start=0&ep_end=100000&id=171 "HTTP/1.1 200 OK"
+17:13:13,449 httpx._client DEBUG HTTP Request: GET https://gogoanime.bid//one-piece-episode-1 "HTTP/1.1 301 Moved Permanently"
+17:13:13,589 httpx._client DEBUG HTTP Request: GET https://gogoanime.gr//one-piece-episode-1 "HTTP/1.1 200 OK"
+17:13:14,121 httpx._client DEBUG HTTP Request: GET https://anihdplay.com/streaming.php?id=MzUxOA==&title=One+Piece+Episode+1 "HTTP/1.1 200 OK"
+17:13:14,467 httpx._client DEBUG HTTP Request: GET https://anihdplay.com/encrypt-ajax.php?title=One+Piece+Episode+1&mip=0.0.0.0&refer=none&ch=d41d8cd98f00b204e9800998ecf8427e&token2=EqTGowccHxH2V7zcMc9yyw&expires2=1679247793&op=1&id=3GIMFEERE2NXfAfB+mg4VQ==&alias=MzUxOA== "HTTP/1.1 200 OK"
+17:13:14,483 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+17:13:14,483 PIL.PngImagePlugin DEBUG STREAM b'gAMA' 41 4
+17:13:14,483 PIL.PngImagePlugin DEBUG STREAM b'cHRM' 57 32
+17:13:14,483 PIL.PngImagePlugin DEBUG STREAM b'bKGD' 101 6
+17:13:14,483 PIL.PngImagePlugin DEBUG b'bKGD' 101 6 (unknown)
+17:13:14,483 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 119 32768
+17:13:14,718 httpx._client DEBUG HTTP Request: GET https://bestanime3.xyz/tv-series/one-piece-720p-hd.html "HTTP/1.1 200 OK"
+17:13:14,781 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+17:13:14,781 PIL.PngImagePlugin DEBUG STREAM b'gAMA' 41 4
+17:13:14,781 PIL.PngImagePlugin DEBUG STREAM b'cHRM' 57 32
+17:13:14,781 PIL.PngImagePlugin DEBUG STREAM b'bKGD' 101 6
+17:13:14,781 PIL.PngImagePlugin DEBUG b'bKGD' 101 6 (unknown)
+17:13:14,781 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 119 32768
+17:13:16,113 httpx._client DEBUG HTTP Request: GET https://haho.moe/anime/sjmjiywi "HTTP/1.1 200 OK"
+17:13:16,474 httpx._client DEBUG HTTP Request: GET https://haho.moe/anime/sjmjiywi/1 "HTTP/1.1 200 OK"
+17:13:16,720 httpx._client DEBUG HTTP Request: GET https://haho.moe/embed?v=mcmxnvxm "HTTP/1.1 200 OK"
+17:13:16,736 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+17:13:16,736 PIL.PngImagePlugin DEBUG STREAM b'gAMA' 41 4
+17:13:16,736 PIL.PngImagePlugin DEBUG STREAM b'cHRM' 57 32
+17:13:16,736 PIL.PngImagePlugin DEBUG STREAM b'bKGD' 101 6
+17:13:16,736 PIL.PngImagePlugin DEBUG b'bKGD' 101 6 (unknown)
+17:13:16,736 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 119 32768
+17:13:34,850 httpx._client DEBUG HTTP Request: GET https://marin.moe/ "HTTP/1.1 200 OK"
+17:13:39,618 httpx._client DEBUG HTTP Request: GET https://marin.moe/anime/fntoucz2 "HTTP/1.1 200 OK"
+17:13:47,467 httpx._client DEBUG HTTP Request: GET https://marin.moe/anime/fntoucz2/1 "HTTP/1.1 200 OK"
+17:13:47,483 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+17:13:47,483 PIL.PngImagePlugin DEBUG STREAM b'gAMA' 41 4
+17:13:47,483 PIL.PngImagePlugin DEBUG STREAM b'cHRM' 57 32
+17:13:47,483 PIL.PngImagePlugin DEBUG STREAM b'bKGD' 101 6
+17:13:47,483 PIL.PngImagePlugin DEBUG b'bKGD' 101 6 (unknown)
+17:13:47,483 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 119 32768
+17:13:47,905 httpx._client DEBUG HTTP Request: GET https://zoro.to/ajax/v2/episode/list/100 "HTTP/1.1 200 OK"
+17:13:48,155 httpx._client DEBUG HTTP Request: GET https://zoro.to/ajax/v2/episode/servers?episodeId=2142 "HTTP/1.1 200 OK"
+17:13:48,484 httpx._client DEBUG HTTP Request: GET https://zoro.to/ajax/v2/episode/sources?id=574667 "HTTP/1.1 200 OK"
+17:13:48,671 httpx._client DEBUG HTTP Request: GET https://zoro.to/ajax/v2/episode/sources?id=410640 "HTTP/1.1 200 OK"
+17:13:48,843 httpx._client DEBUG HTTP Request: GET https://zoro.to/ajax/v2/episode/sources?id=715550 "HTTP/1.1 200 OK"
+17:13:48,984 httpx._client DEBUG HTTP Request: GET https://zoro.to/ajax/v2/episode/sources?id=739554 "HTTP/1.1 200 OK"
+17:13:49,158 httpx._client DEBUG HTTP Request: GET https://zoro.to/ajax/v2/episode/sources?id=583679 "HTTP/1.1 200 OK"
+17:13:49,330 httpx._client DEBUG HTTP Request: GET https://zoro.to/ajax/v2/episode/sources?id=4145 "HTTP/1.1 200 OK"
+17:13:49,487 httpx._client DEBUG HTTP Request: GET https://zoro.to/ajax/v2/episode/sources?id=715498 "HTTP/1.1 200 OK"
+17:13:49,643 httpx._client DEBUG HTTP Request: GET https://zoro.to/ajax/v2/episode/sources?id=739502 "HTTP/1.1 200 OK"
+17:13:49,987 httpx._client DEBUG HTTP Request: GET https://rapid-cloud.co/ajax/embed-6/getSources?id=Ddi8TVjRul9h "HTTP/1.1 200 OK"
+17:13:50,65 httpx._client DEBUG HTTP Request: GET https://github.com/enimax-anime/key/raw/e6/key.txt "HTTP/1.1 302 Found"
+17:13:50,174 httpx._client DEBUG HTTP Request: GET https://raw.githubusercontent.com/enimax-anime/key/e6/key.txt "HTTP/1.1 200 OK"
+17:13:50,394 httpx._client DEBUG HTTP Request: GET https://rapid-cloud.co/ajax/embed-6/getSources?id=zGX5CYrxDfVc "HTTP/1.1 200 OK"
+17:13:50,613 httpx._client DEBUG HTTP Request: GET https://rapid-cloud.co/ajax/embed-6/getSources?id=VjMcJ8woTxdK "HTTP/1.1 200 OK"
+17:13:50,863 httpx._client DEBUG HTTP Request: GET https://rapid-cloud.co/ajax/embed-6/getSources?id=aYuZwtwpV66a "HTTP/1.1 200 OK"
+17:13:50,879 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+17:13:50,879 PIL.PngImagePlugin DEBUG STREAM b'gAMA' 41 4
+17:13:50,879 PIL.PngImagePlugin DEBUG STREAM b'cHRM' 57 32
+17:13:50,879 PIL.PngImagePlugin DEBUG STREAM b'bKGD' 101 6
+17:13:50,879 PIL.PngImagePlugin DEBUG b'bKGD' 101 6 (unknown)
+17:13:50,879 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 119 32768
+17:13:51,332 httpx._client DEBUG HTTP Request: GET https://animepahe.ru/anime/e4a94122-1821-e9db-0b8c-9cf2c0a2a8c7 "HTTP/1.1 200 OK"
+17:13:51,754 httpx._client DEBUG HTTP Request: GET https://animepahe.ru/api?m=release&id=e4a94122-1821-e9db-0b8c-9cf2c0a2a8c7&sort=episode_asc&page=1 "HTTP/1.1 200 OK"
+17:13:52,161 httpx._client DEBUG HTTP Request: GET https://animepahe.ru/play/e4a94122-1821-e9db-0b8c-9cf2c0a2a8c7/fd31e8ebf1c24265ab849360039eedaa8457caf6feb67fdf469b8ff1999d8be9 "HTTP/1.1 200 OK"
+17:13:52,775 httpx._client DEBUG HTTP Request: GET https://pahe.win/EqmUA "HTTP/1.1 200 OK"
+17:13:53,307 httpx._client DEBUG HTTP Request: GET https://kwik.cx/f/DHJBozjF1Usc "HTTP/1.1 200 OK"
+17:13:54,245 httpx._client DEBUG HTTP Request: POST https://kwik.cx/d/DHJBozjF1Usc "HTTP/1.1 302 Found"
+17:13:54,433 httpx._client DEBUG HTTP Request: GET https://pahe.win/fmkoo "HTTP/1.1 200 OK"
+17:13:54,610 httpx._client DEBUG HTTP Request: GET https://kwik.cx/f/pn0dcxtld4hk "HTTP/1.1 200 OK"
+17:13:55,484 httpx._client DEBUG HTTP Request: POST https://kwik.cx/d/pn0dcxtld4hk "HTTP/1.1 302 Found"
+17:13:55,500 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+17:13:55,500 PIL.PngImagePlugin DEBUG STREAM b'gAMA' 41 4
+17:13:55,500 PIL.PngImagePlugin DEBUG STREAM b'cHRM' 57 32
+17:13:55,500 PIL.PngImagePlugin DEBUG STREAM b'bKGD' 101 6
+17:13:55,500 PIL.PngImagePlugin DEBUG b'bKGD' 101 6 (unknown)
+17:13:55,500 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 119 32768
