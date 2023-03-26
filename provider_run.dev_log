@@ -25747,3 +25747,190 @@ json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
 20:17:04,780 PIL.PngImagePlugin DEBUG STREAM b'bKGD' 101 6
 20:17:04,780 PIL.PngImagePlugin DEBUG b'bKGD' 101 6 (unknown)
 20:17:04,780 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 119 32768
+21:12:27,408 httpx._client DEBUG HTTP Request: GET https://animepahe.com/api?m=search&l=8&q=one+piece "HTTP/1.1 301 Moved Permanently"
+21:12:27,832 httpx._client DEBUG HTTP Request: GET https://animepahe.ru/api?m=search&l=8&q=one+piece "HTTP/1.1 200 OK"
+21:12:28,631 httpx._client DEBUG HTTP Request: GET https://9anime.pl/watch/one-piece.ov8 "HTTP/1.1 200 OK"
+21:12:29,22 httpx._client DEBUG HTTP Request: GET https://9anime.pl/ajax/episode/list/177 "HTTP/1.1 200 OK"
+21:12:29,38 logging ERROR Failed to scrape 'https://9anime.pl/watch/one-piece.ov8' with JSONDecodeError('Expecting value: line 1 column 1 (char 0)')
+Traceback (most recent call last):
+  File "D:\a\animdl-provider-benchmarks\animdl-provider-benchmarks\generator.py", line 151, in attempt_scraping_for
+    for link_cb, _ in links:
+  File "C:\hostedtoolcache\windows\Python\3.9.13\x64\lib\site-packages\animdl\core\codebase\providers\nineanime\__init__.py", line 64, in fetcher
+    session.get(
+  File "C:\hostedtoolcache\windows\Python\3.9.13\x64\lib\site-packages\httpx\_models.py", line 756, in json
+    return jsonlib.loads(self.text, **kwargs)
+  File "C:\hostedtoolcache\windows\Python\3.9.13\x64\lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "C:\hostedtoolcache\windows\Python\3.9.13\x64\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\hostedtoolcache\windows\Python\3.9.13\x64\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+21:12:29,69 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+21:12:29,69 PIL.PngImagePlugin DEBUG STREAM b'gAMA' 41 4
+21:12:29,69 PIL.PngImagePlugin DEBUG STREAM b'cHRM' 57 32
+21:12:29,69 PIL.PngImagePlugin DEBUG STREAM b'bKGD' 101 6
+21:12:29,69 PIL.PngImagePlugin DEBUG b'bKGD' 101 6 (unknown)
+21:12:29,69 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 119 32768
+21:12:29,382 httpx._client DEBUG HTTP Request: GET https://allanime.to/getVersion "HTTP/1.1 200 OK"
+21:12:29,694 httpx._client DEBUG HTTP Request: GET https://api.allanime.co/allanimeapi?variables=%7B%22showId%22%3A+%22ReooPAxPMsHM4KPMY%22%7D&query=%0Aquery+%28%24showId%3A+String%21%29+%7B%0A++++show%28%0A++++++++_id%3A+%24showId%0A++++%29+%7B%0A++++++++_id+name+availableEpisodesDetail%0A++++%7D%0A%7D%0A "HTTP/1.1 200 OK"
+21:12:30,101 httpx._client DEBUG HTTP Request: GET https://api.allanime.co/allanimeapi?variables=%7B%22showId%22%3A+%22ReooPAxPMsHM4KPMY%22%2C+%22translationType%22%3A+%22sub%22%2C+%22episodeString%22%3A+%221%22%7D&query=query+%28%24showId%3A+String%21%2C+%24translationType%3A+VaildTranslationTypeEnumType%21%2C+%24episodeString%3A+String%21%29+%7B%0A++++episode%28%0A++++++++showId%3A+%24showId%0A++++++++translationType%3A+%24translationType%0A++++++++episodeString%3A+%24episodeString%0A++++%29+%7B%0A++++++++episodeString+sourceUrls+notes%0A++++%7D%0A%7D "HTTP/1.1 200 OK"
+21:12:30,351 httpx._client DEBUG HTTP Request: GET https://anime.allanimenews.com/apivtwo/clock.json?id=7d2473746a243c2429656b75297034295355294b35296469696b63746768612a65747368656e7f74696a6a2a6b696862692a686f656d75766a67722a70747075636a63657229706f6263697529415c32404b4351504d2975727463676b75242a2475727463676b63744f62243c245074242a2462677263243c24343634352b36352b34305234373c37343c3636283636365c242a2472746768756a67726f6968527f7663243c24757364247b "HTTP/1.1 200 OK"
+21:12:30,976 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+21:12:30,976 PIL.PngImagePlugin DEBUG STREAM b'gAMA' 41 4
+21:12:30,976 PIL.PngImagePlugin DEBUG STREAM b'cHRM' 57 32
+21:12:30,976 PIL.PngImagePlugin DEBUG STREAM b'bKGD' 101 6
+21:12:30,976 PIL.PngImagePlugin DEBUG b'bKGD' 101 6 (unknown)
+21:12:30,976 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 119 32768
+21:12:31,796 httpx._client DEBUG HTTP Request: GET https://corsproxy.io/?https%3A//www.animeout.xyz/download-one-piece-episodes-latest/ "HTTP/1.1 200 OK"
+21:12:45,630 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+21:12:45,630 PIL.PngImagePlugin DEBUG STREAM b'gAMA' 41 4
+21:12:45,630 PIL.PngImagePlugin DEBUG STREAM b'cHRM' 57 32
+21:12:45,630 PIL.PngImagePlugin DEBUG STREAM b'bKGD' 101 6
+21:12:45,630 PIL.PngImagePlugin DEBUG b'bKGD' 101 6 (unknown)
+21:12:45,630 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 119 32768
+21:12:45,958 httpx._client DEBUG HTTP Request: GET https://animtime.com/ "HTTP/1.1 200 OK"
+21:12:46,5 httpx._client DEBUG HTTP Request: GET https://animtime.com/main.2949ae63db158a24c049.js "HTTP/1.1 200 OK"
+21:12:46,193 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+21:12:46,193 PIL.PngImagePlugin DEBUG STREAM b'gAMA' 41 4
+21:12:46,193 PIL.PngImagePlugin DEBUG STREAM b'cHRM' 57 32
+21:12:46,193 PIL.PngImagePlugin DEBUG STREAM b'bKGD' 101 6
+21:12:46,193 PIL.PngImagePlugin DEBUG b'bKGD' 101 6 (unknown)
+21:12:46,193 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 119 32768
+21:12:46,718 httpx._client DEBUG HTTP Request: GET https://gogoanime.bid/category/one-piece "HTTP/1.1 301 Moved Permanently"
+21:12:47,153 httpx._client DEBUG HTTP Request: GET https://gogoanime.gr/category/one-piece "HTTP/1.1 200 OK"
+21:12:47,530 httpx._client DEBUG HTTP Request: GET https://ajax.gogo-load.com/ajax/load-list-episode?ep_start=0&ep_end=100000&id=171 "HTTP/1.1 200 OK"
+21:12:47,735 httpx._client DEBUG HTTP Request: GET https://gogoanime.bid//one-piece-episode-1 "HTTP/1.1 301 Moved Permanently"
+21:12:47,913 httpx._client DEBUG HTTP Request: GET https://gogoanime.gr//one-piece-episode-1 "HTTP/1.1 200 OK"
+21:12:48,590 httpx._client DEBUG HTTP Request: GET https://anihdplay.com/streaming.php?id=MzUxOA==&title=One+Piece+Episode+1 "HTTP/1.1 200 OK"
+21:12:49,59 httpx._client DEBUG HTTP Request: GET https://anihdplay.com/encrypt-ajax.php?title=One+Piece+Episode+1&mip=0.0.0.0&refer=none&ch=d41d8cd98f00b204e9800998ecf8427e&token2=NZGUod5cjWpb5aqjOvzbeA&expires2=1679866968&op=1&id=3GIMFEERE2NXfAfB+mg4VQ==&alias=MzUxOA== "HTTP/1.1 200 OK"
+21:12:49,59 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+21:12:49,59 PIL.PngImagePlugin DEBUG STREAM b'gAMA' 41 4
+21:12:49,59 PIL.PngImagePlugin DEBUG STREAM b'cHRM' 57 32
+21:12:49,59 PIL.PngImagePlugin DEBUG STREAM b'bKGD' 101 6
+21:12:49,59 PIL.PngImagePlugin DEBUG b'bKGD' 101 6 (unknown)
+21:12:49,59 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 119 32768
+21:12:49,357 httpx._client DEBUG HTTP Request: GET https://bestanime3.xyz/tv-series/one-piece-720p-hd.html "HTTP/1.1 200 OK"
+21:12:49,450 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+21:12:49,450 PIL.PngImagePlugin DEBUG STREAM b'gAMA' 41 4
+21:12:49,450 PIL.PngImagePlugin DEBUG STREAM b'cHRM' 57 32
+21:12:49,450 PIL.PngImagePlugin DEBUG STREAM b'bKGD' 101 6
+21:12:49,450 PIL.PngImagePlugin DEBUG b'bKGD' 101 6 (unknown)
+21:12:49,450 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 119 32768
+21:12:52,574 httpx._client DEBUG HTTP Request: GET https://haho.moe/anime/sjmjiywi "HTTP/1.1 200 OK"
+21:12:53,4 httpx._client DEBUG HTTP Request: GET https://haho.moe/anime/sjmjiywi/1 "HTTP/1.1 200 OK"
+21:12:53,302 httpx._client DEBUG HTTP Request: GET https://haho.moe/embed?v=mcmxnvxm "HTTP/1.1 200 OK"
+21:12:53,302 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+21:12:53,302 PIL.PngImagePlugin DEBUG STREAM b'gAMA' 41 4
+21:12:53,302 PIL.PngImagePlugin DEBUG STREAM b'cHRM' 57 32
+21:12:53,318 PIL.PngImagePlugin DEBUG STREAM b'bKGD' 101 6
+21:12:53,318 PIL.PngImagePlugin DEBUG b'bKGD' 101 6 (unknown)
+21:12:53,318 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 119 32768
+21:13:04,397 logging ERROR Failed to scrape 'https://marin.moe/anime/fntoucz2' with ConnectError('[Errno 11001] getaddrinfo failed')
+Traceback (most recent call last):
+  File "C:\hostedtoolcache\windows\Python\3.9.13\x64\lib\site-packages\httpcore\_exceptions.py", line 10, in map_exceptions
+    yield
+  File "C:\hostedtoolcache\windows\Python\3.9.13\x64\lib\site-packages\httpcore\backends\sync.py", line 94, in connect_tcp
+    sock = socket.create_connection(
+  File "C:\hostedtoolcache\windows\Python\3.9.13\x64\lib\socket.py", line 823, in create_connection
+    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+  File "C:\hostedtoolcache\windows\Python\3.9.13\x64\lib\socket.py", line 954, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\hostedtoolcache\windows\Python\3.9.13\x64\lib\site-packages\httpx\_transports\default.py", line 60, in map_httpcore_exceptions
+    yield
+  File "C:\hostedtoolcache\windows\Python\3.9.13\x64\lib\site-packages\httpx\_transports\default.py", line 218, in handle_request
+    resp = self._pool.handle_request(req)
+  File "C:\hostedtoolcache\windows\Python\3.9.13\x64\lib\site-packages\httpcore\_sync\connection_pool.py", line 253, in handle_request
+    raise exc
+  File "C:\hostedtoolcache\windows\Python\3.9.13\x64\lib\site-packages\httpcore\_sync\connection_pool.py", line 237, in handle_request
+    response = connection.handle_request(request)
+  File "C:\hostedtoolcache\windows\Python\3.9.13\x64\lib\site-packages\httpcore\_sync\connection.py", line 86, in handle_request
+    raise exc
+  File "C:\hostedtoolcache\windows\Python\3.9.13\x64\lib\site-packages\httpcore\_sync\connection.py", line 63, in handle_request
+    stream = self._connect(request)
+  File "C:\hostedtoolcache\windows\Python\3.9.13\x64\lib\site-packages\httpcore\_sync\connection.py", line 111, in _connect
+    stream = self._network_backend.connect_tcp(**kwargs)
+  File "C:\hostedtoolcache\windows\Python\3.9.13\x64\lib\site-packages\httpcore\backends\sync.py", line 94, in connect_tcp
+    sock = socket.create_connection(
+  File "C:\hostedtoolcache\windows\Python\3.9.13\x64\lib\contextlib.py", line 137, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "C:\hostedtoolcache\windows\Python\3.9.13\x64\lib\site-packages\httpcore\_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc)
+httpcore.ConnectError: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\a\animdl-provider-benchmarks\animdl-provider-benchmarks\generator.py", line 151, in attempt_scraping_for
+    for link_cb, _ in links:
+  File "C:\hostedtoolcache\windows\Python\3.9.13\x64\lib\site-packages\animdl\core\codebase\providers\marinmoe\__init__.py", line 74, in fetcher
+    anime_data = fetch_anime_data(session, url)
+  File "C:\hostedtoolcache\windows\Python\3.9.13\x64\lib\site-packages\animdl\core\codebase\providers\marinmoe\__init__.py", line 65, in fetch_anime_data
+    "x-inertia-version": get_inertia_version(session),
+  File "C:\hostedtoolcache\windows\Python\3.9.13\x64\lib\site-packages\animdl\core\codebase\providers\marinmoe\__init__.py", line 22, in get_inertia_version
+    response = session.get(MARIN)
+  File "C:\hostedtoolcache\windows\Python\3.9.13\x64\lib\site-packages\httpx\_client.py", line 1045, in get
+    return self.request(
+  File "C:\hostedtoolcache\windows\Python\3.9.13\x64\lib\site-packages\httpx\_client.py", line 821, in request
+    return self.send(request, auth=auth, follow_redirects=follow_redirects)
+  File "C:\hostedtoolcache\windows\Python\3.9.13\x64\lib\site-packages\httpx\_client.py", line 908, in send
+    response = self._send_handling_auth(
+  File "C:\hostedtoolcache\windows\Python\3.9.13\x64\lib\site-packages\httpx\_client.py", line 936, in _send_handling_auth
+    response = self._send_handling_redirects(
+  File "C:\hostedtoolcache\windows\Python\3.9.13\x64\lib\site-packages\httpx\_client.py", line 973, in _send_handling_redirects
+    response = self._send_single_request(request)
+  File "C:\hostedtoolcache\windows\Python\3.9.13\x64\lib\site-packages\httpx\_client.py", line 1009, in _send_single_request
+    response = transport.handle_request(request)
+  File "C:\hostedtoolcache\windows\Python\3.9.13\x64\lib\site-packages\httpx\_transports\default.py", line 218, in handle_request
+    resp = self._pool.handle_request(req)
+  File "C:\hostedtoolcache\windows\Python\3.9.13\x64\lib\contextlib.py", line 137, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "C:\hostedtoolcache\windows\Python\3.9.13\x64\lib\site-packages\httpx\_transports\default.py", line 77, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ConnectError: [Errno 11001] getaddrinfo failed
+21:13:04,444 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+21:13:04,444 PIL.PngImagePlugin DEBUG STREAM b'gAMA' 41 4
+21:13:04,444 PIL.PngImagePlugin DEBUG STREAM b'cHRM' 57 32
+21:13:04,444 PIL.PngImagePlugin DEBUG STREAM b'bKGD' 101 6
+21:13:04,444 PIL.PngImagePlugin DEBUG b'bKGD' 101 6 (unknown)
+21:13:04,444 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 119 32768
+21:13:04,925 httpx._client DEBUG HTTP Request: GET https://zoro.to/ajax/v2/episode/list/100 "HTTP/1.1 200 OK"
+21:13:05,280 httpx._client DEBUG HTTP Request: GET https://zoro.to/ajax/v2/episode/servers?episodeId=2142 "HTTP/1.1 200 OK"
+21:13:05,460 httpx._client DEBUG HTTP Request: GET https://zoro.to/ajax/v2/episode/sources?id=574667 "HTTP/1.1 200 OK"
+21:13:05,655 httpx._client DEBUG HTTP Request: GET https://zoro.to/ajax/v2/episode/sources?id=410640 "HTTP/1.1 200 OK"
+21:13:05,839 httpx._client DEBUG HTTP Request: GET https://zoro.to/ajax/v2/episode/sources?id=715550 "HTTP/1.1 200 OK"
+21:13:06,27 httpx._client DEBUG HTTP Request: GET https://zoro.to/ajax/v2/episode/sources?id=739554 "HTTP/1.1 200 OK"
+21:13:06,233 httpx._client DEBUG HTTP Request: GET https://zoro.to/ajax/v2/episode/sources?id=583679 "HTTP/1.1 200 OK"
+21:13:06,436 httpx._client DEBUG HTTP Request: GET https://zoro.to/ajax/v2/episode/sources?id=4145 "HTTP/1.1 200 OK"
+21:13:06,624 httpx._client DEBUG HTTP Request: GET https://zoro.to/ajax/v2/episode/sources?id=715498 "HTTP/1.1 200 OK"
+21:13:06,798 httpx._client DEBUG HTTP Request: GET https://zoro.to/ajax/v2/episode/sources?id=739502 "HTTP/1.1 200 OK"
+21:13:09,199 further-extraction ERROR Extraction from 'rapidvideo' failed due to: ConnectError('[Errno 11001] getaddrinfo failed').
+21:13:11,511 further-extraction ERROR Extraction from 'rapidvideo' failed due to: ConnectError('[Errno 11001] getaddrinfo failed').
+21:13:13,845 further-extraction ERROR Extraction from 'rapidvideo' failed due to: ConnectError('[Errno 11001] getaddrinfo failed').
+21:13:14,263 httpx._client DEBUG HTTP Request: GET https://rapid-cloud.co/ajax/embed-6/getSources?id=IVKvTpQUKdJL "HTTP/1.1 200 OK"
+21:13:14,279 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+21:13:14,279 PIL.PngImagePlugin DEBUG STREAM b'gAMA' 41 4
+21:13:14,279 PIL.PngImagePlugin DEBUG STREAM b'cHRM' 57 32
+21:13:14,279 PIL.PngImagePlugin DEBUG STREAM b'bKGD' 101 6
+21:13:14,279 PIL.PngImagePlugin DEBUG b'bKGD' 101 6 (unknown)
+21:13:14,279 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 119 32768
+21:13:14,610 httpx._client DEBUG HTTP Request: GET https://animepahe.ru/anime/9844bfb0-6652-2256-fa24-39ea5398f614 "HTTP/1.1 200 OK"
+21:13:14,883 httpx._client DEBUG HTTP Request: GET https://animepahe.ru/api?m=release&id=9844bfb0-6652-2256-fa24-39ea5398f614&sort=episode_asc&page=1 "HTTP/1.1 200 OK"
+21:13:15,129 httpx._client DEBUG HTTP Request: GET https://animepahe.ru/play/9844bfb0-6652-2256-fa24-39ea5398f614/4fa46b80f79533625e988684dee2cff669ea11e63a083e30bbe0bbd3cc1f00f9 "HTTP/1.1 200 OK"
+21:13:15,936 httpx._client DEBUG HTTP Request: GET https://pahe.win/EqmUA "HTTP/1.1 200 OK"
+21:13:16,654 httpx._client DEBUG HTTP Request: GET https://kwik.cx/f/DHJBozjF1Usc "HTTP/1.1 200 OK"
+21:13:17,882 httpx._client DEBUG HTTP Request: POST https://kwik.cx/d/DHJBozjF1Usc "HTTP/1.1 302 Found"
+21:13:18,102 httpx._client DEBUG HTTP Request: GET https://pahe.win/fmkoo "HTTP/1.1 200 OK"
+21:13:18,327 httpx._client DEBUG HTTP Request: GET https://kwik.cx/f/pn0dcxtld4hk "HTTP/1.1 200 OK"
+21:13:19,254 httpx._client DEBUG HTTP Request: POST https://kwik.cx/d/pn0dcxtld4hk "HTTP/1.1 302 Found"
+21:13:19,270 PIL.PngImagePlugin DEBUG STREAM b'IHDR' 16 13
+21:13:19,270 PIL.PngImagePlugin DEBUG STREAM b'gAMA' 41 4
+21:13:19,270 PIL.PngImagePlugin DEBUG STREAM b'cHRM' 57 32
+21:13:19,270 PIL.PngImagePlugin DEBUG STREAM b'bKGD' 101 6
+21:13:19,270 PIL.PngImagePlugin DEBUG b'bKGD' 101 6 (unknown)
+21:13:19,270 PIL.PngImagePlugin DEBUG STREAM b'IDAT' 119 32768
